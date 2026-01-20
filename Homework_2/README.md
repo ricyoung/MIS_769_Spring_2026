@@ -2,6 +2,10 @@
 
 **Points:** 20 | **Due:** Sunday, February 8, 2026 @ 11pm Pacific
 
+**Author:** Richard Young, Ph.D. | UNLV Lee Business School
+
+**Compute:** CPU (free tier is fine)
+
 ---
 
 ## Learning Objectives
