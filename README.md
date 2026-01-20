@@ -91,18 +91,6 @@ Weeks 1-3      Weeks 4-8       Week 9          Weeks 10+
 - **Mid-Term Exam** (50 pts) - Take-home covering Weeks 1-7 - Week 8
 - **Final Exam** (75 pts) - Take-home covering all content - Finals Week
 
-## Grading Scale
-
-| Grade | Range | Grade | Range |
-|-------|-------|-------|-------|
-| A | 94-100 | C+ | 77-79.99 |
-| A- | 90-93.99 | C | 74-76.99 |
-| B+ | 87-89.99 | C- | 70-73.99 |
-| B | 84-86.99 | D+ | 67-69.99 |
-| B- | 80-83.99 | D | 64-66.99 |
-| | | D- | 60-63.99 |
-| | | F | 00-59.99 |
-
 ## Required & Recommended Texts
 
 ### Recommended Books
