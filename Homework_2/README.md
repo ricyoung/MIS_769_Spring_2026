@@ -54,3 +54,9 @@
 
 Upload to Canvas:
 - Your completed `.ipynb` notebook with all cells executed
+
+---
+
+\vspace{1cm}
+
+*— Richard Young, Ph.D.*

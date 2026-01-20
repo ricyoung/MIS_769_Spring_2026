@@ -53,3 +53,9 @@
 Upload to Canvas:
 - Your completed `.ipynb` notebook with all cells executed
 - A screenshot of your "Interesting Finding" cell
+
+---
+
+\vspace{1cm}
+
+*— Richard Young, Ph.D.*
