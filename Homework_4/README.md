@@ -135,13 +135,13 @@ KeyError: "word 'xyz' not in vocabulary"
 
 ## Going Deeper (Optional Challenges)
 
-### Challenge A: Industry-Specific Analogies (+2 bonus)
+### Challenge A: Industry-Specific Analogies
 Create 5 analogies specific to your dataset's domain. Example for finance: `bull - optimistic + pessimistic = bear`?
 
-### Challenge B: Embedding Visualization (+2 bonus)
+### Challenge B: Embedding Visualization
 Use t-SNE to visualize word clusters. Pick 50 words from 5 categories (e.g., positive sentiment, negative sentiment, actors, directors, genres) and show they cluster together.
 
-### Challenge C: Temporal Embeddings (+3 bonus)
+### Challenge C: Temporal Embeddings
 If your data has timestamps, train separate models on different time periods. Do word meanings shift? (e.g., "viral" meant something different before social media)
 
 ---

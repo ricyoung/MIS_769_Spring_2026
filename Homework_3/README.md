@@ -119,13 +119,13 @@ LookupError: Resource stopwords not found.
 
 ## Going Deeper (Optional Challenges)
 
-### Challenge A: Lemmatization Comparison (+2 bonus)
+### Challenge A: Lemmatization Comparison
 Compare results using stemming (Porter) vs. lemmatization (spaCy). Which produces more interpretable results for business reporting?
 
-### Challenge B: Multi-language Stopwords (+2 bonus)
+### Challenge B: Multi-language Stopwords
 If your dataset contains non-English text, implement stopword removal for a second language. Compare the challenges.
 
-### Challenge C: Context-Aware Stopwords (+3 bonus)
+### Challenge C: Context-Aware Stopwords
 Build a function that removes stopwords only when they appear in certain contexts (e.g., keep "not" before adjectives, remove it elsewhere).
 
 ---

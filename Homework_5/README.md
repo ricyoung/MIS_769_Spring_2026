@@ -144,13 +144,13 @@ OSError: [E050] Can't find model 'en_core_web_sm'
 
 ## Going Deeper (Optional Challenges)
 
-### Challenge A: Entity Co-occurrence Network (+2 bonus)
+### Challenge A: Entity Co-occurrence Network
 Build a network graph showing which entities appear together. Do certain companies get mentioned alongside certain people? Use `networkx` to visualize.
 
-### Challenge B: Sentiment by Entity (+3 bonus)
+### Challenge B: Sentiment by Entity
 For each organization mentioned, calculate the average sentiment of reviews that mention it. Which companies have positive vs. negative associations?
 
-### Challenge C: Custom Entity Training (+4 bonus)
+### Challenge C: Custom Entity Training
 Train a custom NER model to recognize domain-specific entities not in spaCy's default model (e.g., FEATURE, COMPETITOR, PRODUCT_LINE). Requires the `en_core_web_trf` model and GPU.
 
 ---
