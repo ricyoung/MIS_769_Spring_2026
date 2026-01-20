@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 768" width="1344" height="768">
+  <defs>
+    <linearGradient id="promptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#26a69a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc9900;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="roleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#9966cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7744aa;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1344" height="768" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="672" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Prompt Engineering</text>
+  <text x="672" y="78" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#888" text-anchor="middle">Crafting effective inputs to guide LLM behavior</text>
+
+  <!-- Zero-Shot vs Few-Shot -->
+  <g transform="translate(80, 110)">
+    <rect x="0" y="0" width="580" height="200" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="580" height="10" rx="5" fill="url(#shotGrad)"/>
+
+    <text x="290" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">In-Context Learning</text>
+
+    <!-- Zero-shot -->
+    <g transform="translate(20, 70)">
+      <rect x="0" y="0" width="170" height="110" rx="8" fill="#1a1a2e"/>
+      <text x="85" y="25" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Zero-Shot</text>
+      <text x="85" y="50" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">"Translate to French:"</text>
+      <text x="85" y="70" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">"Hello world"</text>
+      <text x="85" y="95" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">No examples provided</text>
+    </g>
+
+    <!-- One-shot -->
+    <g transform="translate(205, 70)">
+      <rect x="0" y="0" width="170" height="110" rx="8" fill="#1a1a2e"/>
+      <text x="85" y="25" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4" text-anchor="middle">One-Shot</text>
+      <text x="85" y="48" font-family="Monaco, monospace" font-size="9" fill="#888" text-anchor="middle">"Good→Bon"</text>
+      <text x="85" y="65" font-family="Monaco, monospace" font-size="9" fill="#888" text-anchor="middle">"Hello world→?"</text>
+      <text x="85" y="95" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">1 example provided</text>
+    </g>
+
+    <!-- Few-shot -->
+    <g transform="translate(390, 70)">
+      <rect x="0" y="0" width="170" height="110" rx="8" fill="#1a1a2e"/>
+      <text x="85" y="25" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Few-Shot</text>
+      <text x="85" y="45" font-family="Monaco, monospace" font-size="9" fill="#888" text-anchor="middle">"Good→Bon"</text>
+      <text x="85" y="58" font-family="Monaco, monospace" font-size="9" fill="#888" text-anchor="middle">"Cat→Chat"</text>
+      <text x="85" y="71" font-family="Monaco, monospace" font-size="9" fill="#888" text-anchor="middle">"Hello→?"</text>
+      <text x="85" y="95" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">2-5+ examples</text>
+    </g>
+  </g>
+
+  <!-- Chain of Thought -->
+  <g transform="translate(700, 110)">
+    <rect x="0" y="0" width="560" height="200" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="560" height="10" rx="5" fill="url(#cotGrad)"/>
+
+    <text x="280" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Chain-of-Thought (CoT) Prompting</text>
+
+    <!-- Standard vs CoT -->
+    <g transform="translate(20, 70)">
+      <!-- Standard -->
+      <rect x="0" y="0" width="240" height="110" rx="8" fill="#1a1a2e"/>
+      <text x="120" y="20" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Standard Prompt</text>
+      <text x="120" y="45" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">"Q: 15 + 27 × 3 = ?"</text>
+      <text x="120" y="70" font-family="Monaco, monospace" font-size="10" fill="#ff6b6b" text-anchor="middle">A: 126 ✗</text>
+      <text x="120" y="95" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Direct answer (error-prone)</text>
+    </g>
+
+    <g transform="translate(300, 70)">
+      <!-- CoT -->
+      <rect x="0" y="0" width="240" height="110" rx="8" fill="#1a1a2e"/>
+      <text x="120" y="20" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="bold" fill="#4ecdc4" text-anchor="middle">CoT Prompt</text>
+      <text x="120" y="40" font-family="Monaco, monospace" font-size="9" fill="#888" text-anchor="middle">"Let's think step by step..."</text>
+      <text x="120" y="55" font-family="Monaco, monospace" font-size="9" fill="#ffd700" text-anchor="middle">1. 27 × 3 = 81</text>
+      <text x="120" y="70" font-family="Monaco, monospace" font-size="9" fill="#ffd700" text-anchor="middle">2. 15 + 81 = 96</text>
+      <text x="120" y="85" font-family="Monaco, monospace" font-size="10" fill="#4ecdc4" text-anchor="middle">A: 96 ✓</text>
+      <text x="120" y="100" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" fill="#666" text-anchor="middle">Reasoning steps shown</text>
+    </g>
+  </g>
+
+  <!-- Prompt Structure -->
+  <g transform="translate(80, 340)">
+    <rect x="0" y="0" width="400" height="350" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="400" height="10" rx="5" fill="url(#promptGrad)"/>
+
+    <text x="200" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Effective Prompt Structure</text>
+
+    <!-- Components -->
+    <g transform="translate(20, 70)">
+      <!-- System/Context -->
+      <rect x="0" y="0" width="360" height="50" rx="8" fill="#9966cc" filter="url(#glow)"/>
+      <text x="180" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">1. System/Context</text>
+      <text x="180" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">"You are a helpful coding assistant..."</text>
+    </g>
+
+    <g transform="translate(20, 130)">
+      <!-- Task -->
+      <rect x="0" y="0" width="360" height="50" rx="8" fill="#4a9eff" filter="url(#glow)"/>
+      <text x="180" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">2. Task Description</text>
+      <text x="180" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">"Write a function that sorts a list..."</text>
+    </g>
+
+    <g transform="translate(20, 190)">
+      <!-- Examples -->
+      <rect x="0" y="0" width="360" height="50" rx="8" fill="#4ecdc4" filter="url(#glow)"/>
+      <text x="180" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">3. Examples (Optional)</text>
+      <text x="180" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)" text-anchor="middle">"Input: [3,1,2] → Output: [1,2,3]"</text>
+    </g>
+
+    <g transform="translate(20, 250)">
+      <!-- Format -->
+      <rect x="0" y="0" width="360" height="50" rx="8" fill="#ffd700" filter="url(#glow)"/>
+      <text x="180" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1a1a2e" text-anchor="middle">4. Output Format</text>
+      <text x="180" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="rgba(0,0,0,0.7)" text-anchor="middle">"Return JSON with fields: result, explanation"</text>
+    </g>
+  </g>
+
+  <!-- Advanced Techniques -->
+  <g transform="translate(520, 340)">
+    <rect x="0" y="0" width="360" height="350" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="360" height="10" rx="5" fill="#ff6b6b"/>
+
+    <text x="180" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Advanced Techniques</text>
+
+    <g transform="translate(20, 70)">
+      <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
+      <text x="160" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Self-Consistency</text>
+      <text x="160" y="42" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Generate multiple answers, vote for consensus</text>
+    </g>
+
+    <g transform="translate(20, 135)">
+      <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
+      <text x="160" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Tree of Thought (ToT)</text>
+      <text x="160" y="42" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Explore multiple reasoning branches</text>
+    </g>
+
+    <g transform="translate(20, 200)">
+      <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
+      <text x="160" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffd700" text-anchor="middle">ReAct (Reason + Act)</text>
+      <text x="160" y="42" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Interleave reasoning with tool use</text>
+    </g>
+
+    <g transform="translate(20, 265)">
+      <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
+      <text x="160" y="22" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#9966cc" text-anchor="middle">Constitutional AI</text>
+      <text x="160" y="42" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" fill="#888" text-anchor="middle">Self-critique against principles</text>
+    </g>
+  </g>
+
+  <!-- Best Practices -->
+  <g transform="translate(920, 340)">
+    <rect x="0" y="0" width="340" height="350" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="340" height="10" rx="5" fill="url(#roleGrad)"/>
+
+    <text x="170" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Best Practices</text>
+
+    <g transform="translate(20, 70)">
+      <circle r="6" cx="6" cy="6" fill="#4ecdc4"/>
+      <text x="20" y="10" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4ecdc4">Be Specific</text>
+      <text x="20" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#888">Clear instructions reduce ambiguity</text>
+    </g>
+
+    <g transform="translate(20, 115)">
+      <circle r="6" cx="6" cy="6" fill="#ffd700"/>
+      <text x="20" y="10" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#ffd700">Use Delimiters</text>
+      <text x="20" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#888">```, ###, --- separate sections</text>
+    </g>
+
+    <g transform="translate(20, 160)">
+      <circle r="6" cx="6" cy="6" fill="#ff6b6b"/>
+      <text x="20" y="10" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#ff6b6b">Specify Output Format</text>
+      <text x="20" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#888">JSON, markdown, bullet points</text>
+    </g>
+
+    <g transform="translate(20, 205)">
+      <circle r="6" cx="6" cy="6" fill="#9966cc"/>
+      <text x="20" y="10" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#9966cc">Give the Model an "Out"</text>
+      <text x="20" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#888">"If unsure, say 'I don't know'"</text>
+    </g>
+
+    <g transform="translate(20, 250)">
+      <circle r="6" cx="6" cy="6" fill="#4a9eff"/>
+      <text x="20" y="10" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4a9eff">Iterate and Refine</text>
+      <text x="20" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#888">Test, evaluate, improve prompts</text>
+    </g>
+
+    <g transform="translate(20, 295)">
+      <circle r="6" cx="6" cy="6" fill="#4ecdc4"/>
+      <text x="20" y="10" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#4ecdc4">Consider Temperature</text>
+      <text x="20" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#888">Low for accuracy, high for creativity</text>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <g transform="translate(672, 720)">
+    <text font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666" text-anchor="middle">
+      Prompt engineering is a skill that dramatically impacts LLM performance without changing model weights
+    </text>
+  </g>
+
+</svg>
