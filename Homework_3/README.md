@@ -49,6 +49,8 @@ Text preprocessing is like preparing ingredients before cooking. But just like c
 
 Standard stopword removal can destroy important meaning (like negations in sentiment analysis).
 
+![Text Tokenization Pipeline](tokenization_pipeline.png)
+
 ---
 
 ## Instructions

@@ -52,6 +52,8 @@ Before embeddings, computers saw words as arbitrary symbols. **Word2Vec changed 
 
 **The magic:** king - man + woman ≈ queen
 
+![Word Embeddings](word_embeddings.png)
+
 ---
 
 ## Instructions

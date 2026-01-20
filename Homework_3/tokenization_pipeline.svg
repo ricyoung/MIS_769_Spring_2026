@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 768" width="1344" height="768">
+  <defs>
+    <linearGradient id="tokenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a7edf;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4a9eff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1344" height="768" fill="#1a1a2e"/>
+
+  <!-- Title -->
+  <text x="672" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Text Tokenization Pipeline</text>
+  <text x="672" y="78" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#888" text-anchor="middle">From raw text to numerical representations</text>
+
+  <!-- Pipeline Flow -->
+  <g transform="translate(70, 110)">
+    <rect x="0" y="0" width="1200" height="200" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="1200" height="10" rx="5" fill="url(#tokenGrad)"/>
+
+    <text x="600" y="35" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#4a9eff" text-anchor="middle">Classical Text Processing Pipeline</text>
+
+    <!-- Stage 1: Raw Text -->
+    <g transform="translate(30, 55)">
+      <rect x="0" y="0" width="150" height="120" rx="8" fill="#1a1a2e"/>
+      <text x="75" y="25" font-family="Monaco, monospace" font-size="11" fill="#ff6b6b" text-anchor="middle">Raw Text</text>
+      <text x="75" y="50" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">"The cats are</text>
+      <text x="75" y="65" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">running quickly"</text>
+      <text x="75" y="95" font-family="Monaco, monospace" font-size="8" fill="#666" text-anchor="middle">Unicode string</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <line x1="195" y1="115" x2="230" y2="115" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <!-- Stage 2: Tokenization -->
+    <g transform="translate(240, 55)">
+      <rect x="0" y="0" width="150" height="120" rx="8" fill="#1a1a2e"/>
+      <text x="75" y="25" font-family="Monaco, monospace" font-size="11" fill="#ffd700" text-anchor="middle">Tokenize</text>
+      <text x="75" y="50" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">["The", "cats",</text>
+      <text x="75" y="65" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">"are", "running",</text>
+      <text x="75" y="80" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">"quickly"]</text>
+      <text x="75" y="105" font-family="Monaco, monospace" font-size="8" fill="#666" text-anchor="middle">Split on whitespace</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <line x1="405" y1="115" x2="440" y2="115" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <!-- Stage 3: Normalize -->
+    <g transform="translate(450, 55)">
+      <rect x="0" y="0" width="150" height="120" rx="8" fill="#1a1a2e"/>
+      <text x="75" y="25" font-family="Monaco, monospace" font-size="11" fill="#4ecdc4" text-anchor="middle">Normalize</text>
+      <text x="75" y="50" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">["the", "cats",</text>
+      <text x="75" y="65" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">"are", "running",</text>
+      <text x="75" y="80" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">"quickly"]</text>
+      <text x="75" y="105" font-family="Monaco, monospace" font-size="8" fill="#666" text-anchor="middle">Lowercase</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <line x1="615" y1="115" x2="650" y2="115" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <!-- Stage 4: Stem/Lemma -->
+    <g transform="translate(660, 55)">
+      <rect x="0" y="0" width="150" height="120" rx="8" fill="#1a1a2e"/>
+      <text x="75" y="25" font-family="Monaco, monospace" font-size="11" fill="#9966cc" text-anchor="middle">Stem/Lemmatize</text>
+      <text x="75" y="50" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">["the", "cat",</text>
+      <text x="75" y="65" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">"be", "run",</text>
+      <text x="75" y="80" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">"quick"]</text>
+      <text x="75" y="105" font-family="Monaco, monospace" font-size="8" fill="#666" text-anchor="middle">Base forms</text>
+    </g>
+
+    <!-- Arrow 4 -->
+    <line x1="825" y1="115" x2="860" y2="115" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <!-- Stage 5: Vectorize -->
+    <g transform="translate(870, 55)">
+      <rect x="0" y="0" width="150" height="120" rx="8" fill="#1a1a2e"/>
+      <text x="75" y="25" font-family="Monaco, monospace" font-size="11" fill="#ff6b6b" text-anchor="middle">Vectorize</text>
+      <text x="75" y="50" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle">[0.2, 0.0, 0.5,</text>
+      <text x="75" y="65" font-family="Monaco, monospace" font-size="9" fill="#ddd" text-anchor="middle"> 0.3, 0.1, ...]</text>
+      <text x="75" y="95" font-family="Monaco, monospace" font-size="8" fill="#666" text-anchor="middle">TF-IDF / One-hot</text>
+    </g>
+
+    <!-- Arrow 5 -->
+    <line x1="1035" y1="115" x2="1070" y2="115" stroke="#4a9eff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+    <!-- Stage 6: Model -->
+    <g transform="translate(1080, 55)">
+      <rect x="0" y="0" width="90" height="120" rx="8" fill="#4a9eff" opacity="0.3" stroke="#4a9eff" stroke-width="2"/>
+      <text x="45" y="55" font-family="Monaco, monospace" font-size="11" fill="#4a9eff" text-anchor="middle">Neural</text>
+      <text x="45" y="75" font-family="Monaco, monospace" font-size="11" fill="#4a9eff" text-anchor="middle">Network</text>
+    </g>
+  </g>
+
+  <!-- Stemming vs Lemmatization -->
+  <g transform="translate(70, 340)">
+    <rect x="0" y="0" width="580" height="200" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="580" height="10" rx="5" fill="#9966cc"/>
+
+    <text x="290" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#9966cc" text-anchor="middle">Stemming vs Lemmatization</text>
+
+    <!-- Stemming -->
+    <g transform="translate(30, 60)">
+      <rect x="0" y="0" width="240" height="120" rx="6" fill="#1a1a2e"/>
+      <text x="120" y="25" font-family="Monaco, monospace" font-size="12" fill="#ffd700" text-anchor="middle">Stemming (Porter)</text>
+
+      <text x="20" y="50" font-family="Monaco, monospace" font-size="10" fill="#888">running</text>
+      <text x="100" y="50" font-family="Monaco, monospace" font-size="10" fill="#ddd">→ run</text>
+
+      <text x="20" y="70" font-family="Monaco, monospace" font-size="10" fill="#888">studies</text>
+      <text x="100" y="70" font-family="Monaco, monospace" font-size="10" fill="#ff6b6b">→ studi</text>
+
+      <text x="20" y="90" font-family="Monaco, monospace" font-size="10" fill="#888">better</text>
+      <text x="100" y="90" font-family="Monaco, monospace" font-size="10" fill="#ff6b6b">→ better</text>
+
+      <text x="120" y="115" font-family="Monaco, monospace" font-size="8" fill="#666" text-anchor="middle">Fast, rule-based, may create non-words</text>
+    </g>
+
+    <!-- Lemmatization -->
+    <g transform="translate(300, 60)">
+      <rect x="0" y="0" width="240" height="120" rx="6" fill="#1a1a2e"/>
+      <text x="120" y="25" font-family="Monaco, monospace" font-size="12" fill="#4ecdc4" text-anchor="middle">Lemmatization</text>
+
+      <text x="20" y="50" font-family="Monaco, monospace" font-size="10" fill="#888">running</text>
+      <text x="100" y="50" font-family="Monaco, monospace" font-size="10" fill="#ddd">→ run</text>
+
+      <text x="20" y="70" font-family="Monaco, monospace" font-size="10" fill="#888">studies</text>
+      <text x="100" y="70" font-family="Monaco, monospace" font-size="10" fill="#4ecdc4">→ study</text>
+
+      <text x="20" y="90" font-family="Monaco, monospace" font-size="10" fill="#888">better</text>
+      <text x="100" y="90" font-family="Monaco, monospace" font-size="10" fill="#4ecdc4">→ good</text>
+
+      <text x="120" y="115" font-family="Monaco, monospace" font-size="8" fill="#666" text-anchor="middle">Slower, uses dictionary, proper words</text>
+    </g>
+  </g>
+
+  <!-- Modern Subword Tokenization -->
+  <g transform="translate(690, 340)">
+    <rect x="0" y="0" width="580" height="200" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="580" height="10" rx="5" fill="#4ecdc4"/>
+
+    <text x="290" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Modern: Subword Tokenization (BPE)</text>
+
+    <g transform="translate(30, 60)" font-family="Monaco, monospace" font-size="10">
+      <text x="0" y="0" fill="#ffd700">Byte-Pair Encoding learns common character sequences:</text>
+
+      <rect x="0" y="15" width="520" height="100" rx="4" fill="#1a1a2e"/>
+
+      <text x="20" y="40" fill="#888">"unhappiness"</text>
+      <text x="150" y="40" fill="#ddd">→ ["un", "##happiness"]</text>
+      <text x="350" y="40" fill="#666">or ["un", "##happ", "##iness"]</text>
+
+      <text x="20" y="65" fill="#888">"transformers"</text>
+      <text x="150" y="65" fill="#ddd">→ ["transform", "##ers"]</text>
+
+      <text x="20" y="90" fill="#888">"COVID19"</text>
+      <text x="150" y="90" fill="#ddd">→ ["CO", "##VID", "##19"]</text>
+      <text x="350" y="90" fill="#4ecdc4">Handles OOV!</text>
+    </g>
+
+    <g transform="translate(30, 165)">
+      <text x="260" y="0" font-family="Monaco, monospace" font-size="9" fill="#888" text-anchor="middle">## prefix indicates continuation of previous token (BERT-style)</text>
+    </g>
+  </g>
+
+  <!-- Brain Connection -->
+  <g transform="translate(70, 570)">
+    <rect x="0" y="0" width="580" height="140" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="580" height="10" rx="5" fill="#cc0000"/>
+
+    <text x="290" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" fill="#cc0000" text-anchor="middle">Neuroscience: Speech Segmentation in the Brain</text>
+
+    <g transform="translate(30, 60)" font-family="Monaco, monospace" font-size="10">
+      <text x="0" y="0" fill="#ffd700">How infants learn to segment speech (no spaces in audio!):</text>
+
+      <text x="0" y="25" fill="#ddd">1. Statistical learning: "pre" often followed by "tty" → "pretty"</text>
+      <text x="0" y="45" fill="#ddd">2. Prosodic cues: Stress patterns, pitch contours</text>
+      <text x="0" y="65" fill="#ddd">3. Phonotactic rules: "ng" can end but not begin words</text>
+
+      <text x="400" y="45" fill="#cc0000">Superior temporal</text>
+      <text x="400" y="60" fill="#cc0000">sulcus + Broca's</text>
+    </g>
+  </g>
+
+  <!-- TF-IDF -->
+  <g transform="translate(690, 570)">
+    <rect x="0" y="0" width="580" height="140" rx="12" fill="#252540" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="580" height="10" rx="5" fill="#ffd700"/>
+
+    <text x="290" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffd700" text-anchor="middle">TF-IDF: Term Frequency - Inverse Document Frequency</text>
+
+    <g transform="translate(30, 60)" font-family="Monaco, monospace" font-size="10">
+      <text x="0" y="0" fill="#ddd">TF-IDF(t,d,D) = TF(t,d) × IDF(t,D)</text>
+
+      <rect x="0" y="15" width="250" height="55" rx="4" fill="#1a1a2e"/>
+      <text x="125" y="35" fill="#4a9eff" text-anchor="middle">TF: How often in doc</text>
+      <text x="125" y="55" fill="#888" text-anchor="middle">count(word) / total</text>
+
+      <rect x="270" y="15" width="250" height="55" rx="4" fill="#1a1a2e"/>
+      <text x="395" y="35" fill="#ff6b6b" text-anchor="middle">IDF: How rare overall</text>
+      <text x="395" y="55" fill="#888" text-anchor="middle">log(N / docs_with_word)</text>
+    </g>
+  </g>
+
+  <!-- Bottom -->
+  <g transform="translate(70, 730)">
+    <rect x="0" y="0" width="1200" height="25" rx="8" fill="#252540"/>
+    <text x="600" y="17" font-family="Monaco, monospace" font-size="10" fill="#ffd700" text-anchor="middle">Modern LLMs use subword tokenization (BPE/SentencePiece/WordPiece), handling any text without explicit preprocessing</text>
+  </g>
+
+</svg>

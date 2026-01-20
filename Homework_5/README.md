@@ -59,6 +59,8 @@ spaCy recognizes these business-relevant entities:
 | DATE | Dates and periods | "September 2024" |
 | EVENT | Named events | "Olympics", "Black Friday" |
 
+![Named Entity Recognition](named_entity_recognition.png)
+
 ---
 
 ## Instructions
