@@ -59,13 +59,11 @@ spaCy recognizes these business-relevant entities:
 | DATE | Dates and periods | "September 2024" |
 | EVENT | Named events | "Olympics", "Black Friday" |
 
-### Visual NER with displacy
+### How NER Works
 
-When you run the notebook, spaCy's **displacy** visualizer highlights entities directly in the text with color-coded boxes:
+NER extracts entities from text and classifies them into categories. The diagram below shows the full pipeline including BIO tagging:
 
-![displacy NER Example](ner_displacy_example.svg)
-
-Each entity type has a distinct color, and the label appears above the text. This makes it easy to see exactly what NER extracted and where.
+![Named Entity Recognition](named_entity_recognition.svg)
 
 ---
 
