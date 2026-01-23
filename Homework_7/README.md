@@ -45,6 +45,49 @@
 
 ---
 
+## The Experiment: Before & After RAG
+
+This homework has a simple but powerful structure:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│  STEP 1: Ask the LLM a question (WITHOUT RAG)                       │
+│  ─────────────────────────────────────────────                      │
+│  Question: "What is UNLV's policy on AI in coursework?"             │
+│  Answer: "I don't have specific information about UNLV's policy..." │
+│          (or worse: makes up a policy that doesn't exist)           │
+└─────────────────────────────────────────────────────────────────────┘
+                                  ↓
+┌─────────────────────────────────────────────────────────────────────┐
+│  STEP 2: Build your RAG system                                      │
+│  ─────────────────────────────                                      │
+│  • Load documents (syllabus, policies, course materials)            │
+│  • Chunk them into searchable pieces                                │
+│  • Create embeddings and index them                                 │
+└─────────────────────────────────────────────────────────────────────┘
+                                  ↓
+┌─────────────────────────────────────────────────────────────────────┐
+│  STEP 3: Ask the SAME question (WITH RAG)                           │
+│  ────────────────────────────────────────                           │
+│  Question: "What is UNLV's policy on AI in coursework?"             │
+│  Retrieved: [Chunk from syllabus about AI tool policy...]           │
+│  Answer: "According to the course syllabus, students are            │
+│           encouraged to use AI tools but must cite them..."         │
+└─────────────────────────────────────────────────────────────────────┘
+                                  ↓
+┌─────────────────────────────────────────────────────────────────────┐
+│  STEP 4: Compare the answers                                        │
+│  ───────────────────────────                                        │
+│  • Which is more accurate?                                          │
+│  • Which cites sources?                                             │
+│  • Which would you trust for a business decision?                   │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+![RAG Comparison](rag_comparison.svg)
+
+---
+
 ## The Big Picture
 
 **The Problem:** LLMs have fixed knowledge (training cutoff) and can hallucinate.
