@@ -18,6 +18,69 @@
 
 ---
 
+## Key Concepts: What You'll Learn
+
+### Zero-Shot Prompting
+**Definition:** Asking the model to perform a task with no examples—just instructions.
+
+```
+Prompt: "Classify this review as positive or negative: 'Great product!'"
+```
+
+The model uses only its pre-trained knowledge. Works well for common, well-defined tasks.
+
+### One-Shot Prompting
+**Definition:** Providing exactly **one example** before your actual task.
+
+```
+Prompt:
+"Classify the sentiment:
+Review: 'Terrible service' → Negative
+
+Now classify:
+Review: 'Amazing experience!' →"
+```
+
+One example helps the model understand the expected format and style.
+
+### Few-Shot Prompting
+**Definition:** Providing **2-5 examples** to establish a pattern before your task.
+
+```
+Prompt:
+"Classify sentiment:
+'Love it!' → Positive
+'Worst ever' → Negative
+'It's fine' → Neutral
+
+'Could be better' →"
+```
+
+More examples = more consistent outputs, but higher token cost.
+
+### Chain-of-Thought (CoT) Prompting
+**Definition:** Asking the model to **show its reasoning step-by-step** before giving a final answer.
+
+```
+Prompt: "Think step by step: If a store has 50 apples, sells 23,
+and receives 15 more, how many apples are there?"
+```
+
+CoT dramatically improves performance on math, logic, and multi-step reasoning tasks.
+
+![Chain of Thought Prompting](chain_of_thought.svg)
+
+### Quick Comparison
+
+| Technique | Examples | Best For | Token Cost |
+|-----------|----------|----------|------------|
+| Zero-shot | 0 | Simple, common tasks | Lowest |
+| One-shot | 1 | Format demonstration | Low |
+| Few-shot | 2-5 | Complex patterns | Medium |
+| Chain-of-thought | 0+ with "think step by step" | Reasoning tasks | Higher |
+
+---
+
 ## Why This Matters for Business
 
 > **10x Productivity:** GitHub reports that developers using Copilot with well-crafted prompts complete tasks 55% faster. The difference between a good and bad prompt can be hours of saved work.
@@ -187,6 +250,55 @@ V4: "Extract factual product specifications and features.
 - **Q2:** Show your prompt iteration history. What improved results most?
 - **Q3:** When did few-shot outperform zero-shot? When didn't it matter?
 - **Q4:** How would you A/B test prompts in a production system?
+
+---
+
+## From Chain-of-Thought to Thinking Models
+
+### The Evolution of Reasoning in AI
+
+Chain-of-thought prompting was a breakthrough discovery: simply asking models to "think step by step" dramatically improved their performance on complex tasks. But researchers asked: **what if we built this reasoning directly into the model?**
+
+This led to a new category of **Thinking Models** (also called **Reasoning Models**):
+
+| Model | Company | Key Feature |
+|-------|---------|-------------|
+| o1 / o3 | OpenAI | Extended "thinking" before responding |
+| Claude (extended thinking) | Anthropic | Explicit reasoning traces |
+| DeepSeek-R1 | DeepSeek | Open reasoning model |
+| Gemini 2.0 Flash Thinking | Google | Built-in chain-of-thought |
+
+### How Thinking Models Work
+
+```
+Traditional LLM:
+Input → [Generate tokens] → Output
+
+Thinking Model:
+Input → [Internal reasoning...] → [Verify...] → [Refine...] → Output
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        This "thinking" phase can take seconds to minutes
+```
+
+The model essentially performs **chain-of-thought internally**, often exploring multiple approaches before committing to an answer.
+
+### Why This Matters
+
+- **Better accuracy** on math, coding, and logic problems
+- **Self-correction** during the thinking phase
+- **Trade-off:** Slower and more expensive, but higher quality
+
+### CoT Prompting vs. Thinking Models
+
+| Aspect | CoT Prompting | Thinking Models |
+|--------|---------------|-----------------|
+| How it works | User prompts "think step by step" | Model thinks automatically |
+| Transparency | Reasoning visible in output | Reasoning may be hidden |
+| Control | You design the reasoning | Model controls reasoning |
+| Cost | Standard token pricing | Often premium pricing |
+| Best for | When you need visible reasoning | When you need best accuracy |
+
+**Bottom line:** Chain-of-thought prompting taught us that reasoning improves outputs. Thinking models bake that insight directly into the architecture. Understanding CoT helps you understand what these newer models are doing under the hood.
 
 ---
 
