@@ -59,6 +59,63 @@ Sentence embeddings capture the meaning of entire sentences, handling:
 
 ---
 
+## Understanding Cosine Similarity
+
+Cosine similarity is the heart of semantic search. It measures how similar two vectors are by looking at the **angle** between them, not their length.
+
+![Cosine Similarity](cosine_similarity.svg)
+
+### The Intuition
+
+Think of each sentence as an arrow pointing in some direction in high-dimensional space:
+- **Similar sentences** point in similar directions → **small angle** → **high cosine similarity**
+- **Different sentences** point in different directions → **large angle** → **low cosine similarity**
+
+### The Formula
+
+```
+cosine_similarity(A, B) = (A · B) / (||A|| × ||B||)
+```
+
+Where:
+- `A · B` = dot product (sum of element-wise multiplication)
+- `||A||` = magnitude (length) of vector A
+
+### Interpreting Scores
+
+| Score | Interpretation | Example |
+|-------|---------------|---------|
+| **0.9 - 1.0** | Nearly identical meaning | "I love this" ↔ "I really love this" |
+| **0.7 - 0.9** | Very similar | "Great movie!" ↔ "Excellent film!" |
+| **0.5 - 0.7** | Somewhat related | "Great movie!" ↔ "Good entertainment" |
+| **0.3 - 0.5** | Weakly related | "Great movie!" ↔ "I watched something" |
+| **0.0 - 0.3** | Unrelated | "Great movie!" ↔ "The weather is cold" |
+
+### Why Cosine Over Euclidean Distance?
+
+Cosine similarity ignores vector magnitude—only direction matters. This is crucial because:
+- A long review and short review about the same topic should be similar
+- We care about **what** is said, not **how much** is said
+
+```python
+# Quick example
+from sklearn.metrics.pairwise import cosine_similarity
+
+# These will have HIGH similarity (same meaning)
+sim = cosine_similarity(
+    model.encode(["I love this movie"]),
+    model.encode(["This film is amazing"])
+)[0][0]  # ≈ 0.89
+
+# These will have LOW similarity (different topics)
+sim = cosine_similarity(
+    model.encode(["I love this movie"]),
+    model.encode(["The weather is cold"])
+)[0][0]  # ≈ 0.12
+```
+
+---
+
 ## Instructions
 
 1. Open `MIS769_HW6_Sentence_Embeddings.ipynb` in Google Colab
