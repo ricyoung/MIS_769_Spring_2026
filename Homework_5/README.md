@@ -61,6 +61,14 @@ spaCy recognizes these business-relevant entities:
 
 ![Named Entity Recognition](named_entity_recognition.png)
 
+### Visual NER with displacy
+
+When you run the notebook, spaCy's **displacy** visualizer will highlight entities directly in the text with color-coded boxes:
+
+![displacy NER Example](ner_displacy_example.svg)
+
+This makes it easy to see exactly what NER extracted and where. Each entity type has a distinct color, and the label appears above the text.
+
 ---
 
 ## Instructions

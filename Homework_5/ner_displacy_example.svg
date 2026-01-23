@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+  <style>
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: #333; }
+    .entity-box { rx: 4; }
+    .label { font-family: Arial, sans-serif; font-size: 9px; font-weight: bold; fill: white; }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="200" fill="#FAFAFA"/>
+
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333" text-anchor="middle">spaCy displacy NER Visualization</text>
+  <text x="450" y="50" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">Entities are highlighted with colored boxes and labels</text>
+
+  <!-- Example sentence with entities -->
+  <g transform="translate(40, 90)">
+    <!-- "Apple" - ORG -->
+    <rect x="0" y="-20" width="50" height="28" fill="#7C4DFF" class="entity-box"/>
+    <text x="5" y="0" class="text" fill="white">Apple</text>
+    <text x="5" y="-8" class="label">ORG</text>
+
+    <!-- " CEO " -->
+    <text x="55" y="0" class="text"> CEO </text>
+
+    <!-- "Tim Cook" - PERSON -->
+    <rect x="100" y="-20" width="75" height="28" fill="#AA00FF" class="entity-box"/>
+    <text x="105" y="0" class="text" fill="white">Tim Cook</text>
+    <text x="105" y="-8" class="label">PERSON</text>
+
+    <!-- " announced the new " -->
+    <text x="180" y="0" class="text"> announced the new </text>
+
+    <!-- "iPhone 15" - PRODUCT -->
+    <rect x="340" y="-20" width="80" height="28" fill="#00BFA5" class="entity-box"/>
+    <text x="345" y="0" class="text" fill="white">iPhone 15</text>
+    <text x="345" y="-8" class="label">PRODUCT</text>
+
+    <!-- " in " -->
+    <text x="425" y="0" class="text"> in </text>
+
+    <!-- "San Francisco" - GPE -->
+    <rect x="450" y="-20" width="105" height="28" fill="#EF5350" class="entity-box"/>
+    <text x="455" y="0" class="text" fill="white">San Francisco</text>
+    <text x="455" y="-8" class="label">GPE</text>
+
+    <!-- " yesterday." -->
+    <text x="560" y="0" class="text"> yesterday.</text>
+  </g>
+
+  <!-- Second line -->
+  <g transform="translate(40, 140)">
+    <!-- "The product costs " -->
+    <text x="0" y="0" class="text">The product costs </text>
+
+    <!-- "$999" - MONEY -->
+    <rect x="135" y="-20" width="45" height="28" fill="#43A047" class="entity-box"/>
+    <text x="140" y="0" class="text" fill="white">$999</text>
+    <text x="140" y="-8" class="label">MONEY</text>
+
+    <!-- " and will be available in the " -->
+    <text x="185" y="0" class="text"> and will be available in the </text>
+
+    <!-- "United States" - GPE -->
+    <rect x="400" y="-20" width="100" height="28" fill="#EF5350" class="entity-box"/>
+    <text x="405" y="0" class="text" fill="white">United States</text>
+    <text x="405" y="-8" class="label">GPE</text>
+
+    <!-- " starting " -->
+    <text x="505" y="0" class="text"> starting </text>
+
+    <!-- "September 22, 2024" - DATE -->
+    <rect x="570" y="-20" width="145" height="28" fill="#1E88E5" class="entity-box"/>
+    <text x="575" y="0" class="text" fill="white">September 22, 2024</text>
+    <text x="575" y="-8" class="label">DATE</text>
+
+    <!-- "." -->
+    <text x="720" y="0" class="text">.</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(40, 180)">
+    <rect x="0" y="-10" width="12" height="12" fill="#7C4DFF" rx="2"/>
+    <text x="16" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">ORG</text>
+
+    <rect x="60" y="-10" width="12" height="12" fill="#AA00FF" rx="2"/>
+    <text x="76" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">PERSON</text>
+
+    <rect x="140" y="-10" width="12" height="12" fill="#00BFA5" rx="2"/>
+    <text x="156" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">PRODUCT</text>
+
+    <rect x="220" y="-10" width="12" height="12" fill="#EF5350" rx="2"/>
+    <text x="236" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">GPE (Location)</text>
+
+    <rect x="320" y="-10" width="12" height="12" fill="#43A047" rx="2"/>
+    <text x="336" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">MONEY</text>
+
+    <rect x="400" y="-10" width="12" height="12" fill="#1E88E5" rx="2"/>
+    <text x="416" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">DATE</text>
+  </g>
+</svg>
