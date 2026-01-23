@@ -117,6 +117,11 @@ Weeks 1-3      Weeks 4-8       Week 9          Weeks 10+
 - **The Neuroscience of Artificial Intelligence** - Richard Young, Ph.D.
   [PDF](https://deepneuro.ai/pdfs/neuroai-handbook.pdf) | [HTML](https://deepneuro.ai/mis769/)
 
+### Additional Resources
+
+- **Spinning Up in Deep RL** - OpenAI's introduction to deep reinforcement learning
+  [Online](https://spinningup.openai.com/en/latest/index.html)
+
 ## Tools & Technologies
 
 - **Python** - Primary programming language
