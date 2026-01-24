@@ -27,15 +27,15 @@
   <rect width="1200" height="500" fill="#1a1a2e"/>
 
   <!-- Title -->
-  <text x="600" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Data Processing Pipeline</text>
-  <text x="600" y="75" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" fill="#888" text-anchor="middle">From raw data to actionable insights</text>
+  <text x="600" y="45" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">Data Processing Pipeline</text>
+  <text x="600" y="75" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" fill="#888" text-anchor="middle">From raw data to actionable insights</text>
 
   <!-- Step 1: Load Data -->
   <g transform="translate(50, 110)">
     <rect x="0" y="0" width="250" height="180" rx="12" fill="#252540" filter="url(#shadow)"/>
     <rect x="0" y="0" width="250" height="8" rx="4" fill="url(#loadGrad)"/>
 
-    <text x="125" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#4ecdc4" text-anchor="middle">1. Load Data</text>
+    <text x="125" y="40" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#4ecdc4" text-anchor="middle">1. Load Data</text>
 
     <!-- Database icon -->
     <g transform="translate(85, 60)">
@@ -45,7 +45,7 @@
       <ellipse cx="40" cy="40" rx="35" ry="10" fill="none" stroke="#4ecdc4" stroke-width="1" opacity="0.5"/>
     </g>
 
-    <text x="125" y="160" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">Kaggle • HuggingFace</text>
+    <text x="125" y="160" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">Kaggle • HuggingFace</text>
   </g>
 
   <!-- Arrow 1 -->
@@ -59,7 +59,7 @@
     <rect x="0" y="0" width="250" height="180" rx="12" fill="#252540" filter="url(#shadow)"/>
     <rect x="0" y="0" width="250" height="8" rx="4" fill="url(#cleanGrad)"/>
 
-    <text x="125" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffd700" text-anchor="middle">2. Clean Data</text>
+    <text x="125" y="40" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#ffd700" text-anchor="middle">2. Clean Data</text>
 
     <!-- Checklist icon -->
     <g transform="translate(60, 55)">
@@ -68,18 +68,18 @@
       <!-- Check items -->
       <rect x="15" y="12" width="12" height="12" rx="2" fill="none" stroke="#4ecdc4" stroke-width="2"/>
       <path d="M 18 18 L 21 21 L 26 14" fill="none" stroke="#4ecdc4" stroke-width="2"/>
-      <text x="35" y="22" font-family="Monaco, monospace" font-size="9" fill="#ddd">Missing values</text>
+      <text x="35" y="22" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ddd">Missing values</text>
 
       <rect x="15" y="35" width="12" height="12" rx="2" fill="none" stroke="#4ecdc4" stroke-width="2"/>
       <path d="M 18 41 L 21 44 L 26 37" fill="none" stroke="#4ecdc4" stroke-width="2"/>
-      <text x="35" y="45" font-family="Monaco, monospace" font-size="9" fill="#ddd">Duplicates</text>
+      <text x="35" y="45" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ddd">Duplicates</text>
 
       <rect x="15" y="58" width="12" height="12" rx="2" fill="none" stroke="#4ecdc4" stroke-width="2"/>
       <path d="M 18 64 L 21 67 L 26 60" fill="none" stroke="#4ecdc4" stroke-width="2"/>
-      <text x="35" y="68" font-family="Monaco, monospace" font-size="9" fill="#ddd">Outliers</text>
+      <text x="35" y="68" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ddd">Outliers</text>
     </g>
 
-    <text x="125" y="160" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">Data Quality Assessment</text>
+    <text x="125" y="160" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">Data Quality Assessment</text>
   </g>
 
   <!-- Arrow 2 -->
@@ -93,7 +93,7 @@
     <rect x="0" y="0" width="250" height="180" rx="12" fill="#252540" filter="url(#shadow)"/>
     <rect x="0" y="0" width="250" height="8" rx="4" fill="url(#exploreGrad)"/>
 
-    <text x="125" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#9966cc" text-anchor="middle">3. Explore</text>
+    <text x="125" y="40" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#9966cc" text-anchor="middle">3. Explore</text>
 
     <!-- Bar chart icon -->
     <g transform="translate(60, 55)">
@@ -110,7 +110,7 @@
       <line x1="15" y1="15" x2="15" y2="80" stroke="#888" stroke-width="1"/>
     </g>
 
-    <text x="125" y="160" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">Visualize • Analyze</text>
+    <text x="125" y="160" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">Visualize • Analyze</text>
   </g>
 
   <!-- Arrow 3 -->
@@ -124,7 +124,7 @@
     <rect x="0" y="0" width="140" height="180" rx="12" fill="#252540" filter="url(#shadow)"/>
     <rect x="0" y="0" width="140" height="8" rx="4" fill="url(#insightGrad)"/>
 
-    <text x="70" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#ff6b6b" text-anchor="middle">4. Insight</text>
+    <text x="70" y="40" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#ff6b6b" text-anchor="middle">4. Insight</text>
 
     <!-- Lightbulb icon -->
     <g transform="translate(35, 55)">
@@ -141,7 +141,7 @@
       <line x1="53" y1="12" x2="60" y2="5" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
     </g>
 
-    <text x="70" y="160" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">Find patterns!</text>
+    <text x="70" y="160" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">Find patterns!</text>
   </g>
 
   <!-- Bottom summary -->
@@ -149,9 +149,9 @@
     <rect x="0" y="0" width="1100" height="150" rx="12" fill="#252540" filter="url(#shadow)"/>
     <rect x="0" y="0" width="1100" height="8" rx="4" fill="#4a9eff"/>
 
-    <text x="550" y="40" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="bold" fill="#4a9eff" text-anchor="middle">What You'll Practice in This Homework</text>
+    <text x="550" y="40" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#4a9eff" text-anchor="middle">What You'll Practice in This Homework</text>
 
-    <g transform="translate(80, 60)" font-family="Monaco, monospace" font-size="11">
+    <g transform="translate(80, 60)" font-family="SF Mono, Menlo, monospace" font-size="11">
       <circle cx="0" cy="8" r="4" fill="#4ecdc4"/>
       <text x="15" y="12" fill="#ddd">Connect to Kaggle or HuggingFace datasets</text>
 
@@ -165,7 +165,7 @@
       <text x="565" y="42" fill="#ddd">Find something interesting in your data!</text>
     </g>
 
-    <text x="550" y="130" font-family="Monaco, monospace" font-size="10" fill="#888" text-anchor="middle">This workflow applies to any data science project — business analytics, ML, research</text>
+    <text x="550" y="130" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">This workflow applies to any data science project — business analytics, ML, research</text>
   </g>
 
 </svg>
