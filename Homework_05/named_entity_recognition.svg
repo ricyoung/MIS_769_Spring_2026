@@ -51,12 +51,12 @@
   </g>
 
   <!-- Title -->
-  <text x="672" y="50" font-family="Helvetica Neue, Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Named Entity Recognition (NER)</text>
-  <text x="672" y="85" font-family="Helvetica Neue, Arial, sans-serif" font-size="18" fill="#888" text-anchor="middle">Extracting and classifying named entities from text</text>
+  <text x="672" y="50" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Named Entity Recognition (NER)</text>
+  <text x="672" y="85" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="18" fill="#888" text-anchor="middle">Extracting and classifying named entities from text</text>
 
   <!-- Input sentence box -->
   <rect x="72" y="140" width="1200" height="100" rx="12" fill="#252540" filter="url(#shadow)"/>
-  <text x="92" y="175" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" fill="#888">INPUT TEXT</text>
+  <text x="92" y="175" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" fill="#888">INPUT TEXT</text>
 
   <!-- Sentence with highlighted entities -->
   <text y="215" font-family="Georgia, serif" font-size="24" fill="white">
@@ -80,7 +80,7 @@
   <g transform="translate(100, 360)">
     <rect width="200" height="140" rx="10" fill="#252540" filter="url(#shadow)"/>
     <rect width="200" height="8" rx="4" fill="url(#orgGrad)"/>
-    <text x="100" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" fill="#9966cc" text-anchor="middle" font-weight="bold">ORGANIZATION</text>
+    <text x="100" y="45" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="14" fill="#9966cc" text-anchor="middle" font-weight="bold">ORGANIZATION</text>
     <rect x="30" y="65" width="140" height="50" rx="8" fill="url(#orgGrad)" filter="url(#glow)"/>
     <text x="100" y="98" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Apple</text>
   </g>
@@ -89,7 +89,7 @@
   <g transform="translate(360, 360)">
     <rect width="200" height="140" rx="10" fill="#252540" filter="url(#shadow)"/>
     <rect width="200" height="8" rx="4" fill="url(#personGrad)"/>
-    <text x="100" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" fill="#ff8c42" text-anchor="middle" font-weight="bold">PERSON</text>
+    <text x="100" y="45" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="14" fill="#ff8c42" text-anchor="middle" font-weight="bold">PERSON</text>
     <rect x="20" y="65" width="160" height="50" rx="8" fill="url(#personGrad)" filter="url(#glow)"/>
     <text x="100" y="98" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Tim Cook</text>
   </g>
@@ -98,7 +98,7 @@
   <g transform="translate(620, 360)">
     <rect width="220" height="140" rx="10" fill="#252540" filter="url(#shadow)"/>
     <rect width="220" height="8" rx="4" fill="url(#locGrad)"/>
-    <text x="110" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" fill="#4a9eff" text-anchor="middle" font-weight="bold">LOCATION</text>
+    <text x="110" y="45" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="14" fill="#4a9eff" text-anchor="middle" font-weight="bold">LOCATION</text>
     <rect x="20" y="65" width="180" height="50" rx="8" fill="url(#locGrad)" filter="url(#glow)"/>
     <text x="110" y="98" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Cupertino</text>
   </g>
@@ -107,14 +107,14 @@
   <g transform="translate(900, 360)">
     <rect width="200" height="140" rx="10" fill="#252540" filter="url(#shadow)"/>
     <rect width="200" height="8" rx="4" fill="url(#dateGrad)"/>
-    <text x="100" y="45" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" fill="#4ecdc4" text-anchor="middle" font-weight="bold">DATE</text>
+    <text x="100" y="45" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="14" fill="#4ecdc4" text-anchor="middle" font-weight="bold">DATE</text>
     <rect x="30" y="65" width="140" height="50" rx="8" fill="url(#dateGrad)" filter="url(#glow)"/>
     <text x="100" y="98" font-family="Georgia, serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">Tuesday</text>
   </g>
 
   <!-- BIO Tags section -->
   <rect x="72" y="540" width="1200" height="180" rx="12" fill="#252540" filter="url(#shadow)"/>
-  <text x="92" y="575" font-family="Helvetica Neue, Arial, sans-serif" font-size="16" fill="#888">BIO TAGGING SCHEME</text>
+  <text x="92" y="575" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" fill="#888">BIO TAGGING SCHEME</text>
 
   <!-- Token row -->
   <g font-family="Monaco, Consolas, monospace" font-size="16">
@@ -150,7 +150,7 @@
 
   <!-- Legend -->
   <g transform="translate(92, 700)">
-    <text font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#888">
+    <text font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="12" fill="#888">
       <tspan font-weight="bold">B</tspan><tspan> = Beginning of entity</tspan>
       <tspan x="200" font-weight="bold">I</tspan><tspan> = Inside (continuation)</tspan>
       <tspan x="420" font-weight="bold">O</tspan><tspan> = Outside any entity</tspan>
