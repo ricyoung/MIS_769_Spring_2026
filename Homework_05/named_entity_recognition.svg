@@ -58,9 +58,9 @@
   <rect x="72" y="140" width="1200" height="100" rx="12" fill="#252540" filter="url(#shadow)"/>
   <text x="92" y="175" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" fill="#888">INPUT TEXT</text>
 
-  <!-- Sentence with highlighted entities -->
+  <!-- Sentence with highlighted entities - bright colors for dark background -->
   <text y="215" font-family="Georgia, serif" font-size="24" fill="white">
-    <tspan x="92" fill="#aaa">"</tspan><tspan fill="url(#orgGrad)" font-weight="bold">Apple</tspan><tspan fill="white"> CEO </tspan><tspan fill="url(#personGrad)" font-weight="bold">Tim Cook</tspan><tspan fill="white"> announced new products in </tspan><tspan fill="url(#locGrad)" font-weight="bold">Cupertino</tspan><tspan fill="white"> on </tspan><tspan fill="url(#dateGrad)" font-weight="bold">Tuesday</tspan><tspan fill="#aaa">."</tspan>
+    <tspan x="92" fill="#aaa">"</tspan><tspan fill="#cc99ff" font-weight="bold">Apple</tspan><tspan fill="white"> CEO </tspan><tspan fill="#ffaa66" font-weight="bold">Tim Cook</tspan><tspan fill="white"> announced new products in </tspan><tspan fill="#66bbff" font-weight="bold">Cupertino</tspan><tspan fill="white"> on </tspan><tspan fill="#66eecc" font-weight="bold">Tuesday</tspan><tspan fill="#aaa">."</tspan>
   </text>
 
   <!-- Extraction arrows -->
@@ -116,36 +116,36 @@
   <rect x="72" y="540" width="1200" height="180" rx="12" fill="#252540" filter="url(#shadow)"/>
   <text x="92" y="575" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="16" fill="#888">BIO TAGGING SCHEME</text>
 
-  <!-- Token row -->
+  <!-- Token row - bright colors for dark background -->
   <g font-family="Monaco, Consolas, monospace" font-size="16">
-    <text x="92" y="620" fill="#888">Token:</text>
-    <text x="180" y="620" fill="url(#orgGrad)">Apple</text>
+    <text x="92" y="620" fill="#aaa">Token:</text>
+    <text x="180" y="620" fill="#cc99ff">Apple</text>
     <text x="270" y="620" fill="white">CEO</text>
-    <text x="340" y="620" fill="url(#personGrad)">Tim</text>
-    <text x="410" y="620" fill="url(#personGrad)">Cook</text>
+    <text x="340" y="620" fill="#ffaa66">Tim</text>
+    <text x="410" y="620" fill="#ffaa66">Cook</text>
     <text x="500" y="620" fill="white">announced</text>
     <text x="620" y="620" fill="white">new</text>
     <text x="680" y="620" fill="white">products</text>
     <text x="790" y="620" fill="white">in</text>
-    <text x="840" y="620" fill="url(#locGrad)">Cupertino</text>
+    <text x="840" y="620" fill="#66bbff">Cupertino</text>
     <text x="980" y="620" fill="white">on</text>
-    <text x="1030" y="620" fill="url(#dateGrad)">Tuesday</text>
+    <text x="1030" y="620" fill="#66eecc">Tuesday</text>
   </g>
 
-  <!-- Tag row -->
+  <!-- Tag row - bright colors for dark background -->
   <g font-family="Monaco, Consolas, monospace" font-size="14" font-weight="bold">
-    <text x="92" y="660" fill="#888">Tag:</text>
-    <text x="180" y="660" fill="#9966cc">B-ORG</text>
-    <text x="270" y="660" fill="#666">O</text>
-    <text x="340" y="660" fill="#ff8c42">B-PER</text>
-    <text x="410" y="660" fill="#ff8c42">I-PER</text>
-    <text x="500" y="660" fill="#666">O</text>
-    <text x="620" y="660" fill="#666">O</text>
-    <text x="680" y="660" fill="#666">O</text>
-    <text x="790" y="660" fill="#666">O</text>
-    <text x="840" y="660" fill="#4a9eff">B-LOC</text>
-    <text x="980" y="660" fill="#666">O</text>
-    <text x="1030" y="660" fill="#4ecdc4">B-DATE</text>
+    <text x="92" y="660" fill="#aaa">Tag:</text>
+    <text x="180" y="660" fill="#cc99ff">B-ORG</text>
+    <text x="270" y="660" fill="#999">O</text>
+    <text x="340" y="660" fill="#ffaa66">B-PER</text>
+    <text x="410" y="660" fill="#ffaa66">I-PER</text>
+    <text x="500" y="660" fill="#999">O</text>
+    <text x="620" y="660" fill="#999">O</text>
+    <text x="680" y="660" fill="#999">O</text>
+    <text x="790" y="660" fill="#999">O</text>
+    <text x="840" y="660" fill="#66bbff">B-LOC</text>
+    <text x="980" y="660" fill="#999">O</text>
+    <text x="1030" y="660" fill="#66eecc">B-DATE</text>
   </g>
 
   <!-- Legend -->

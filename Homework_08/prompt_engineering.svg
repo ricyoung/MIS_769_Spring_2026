@@ -35,7 +35,7 @@
 
   <!-- Title -->
   <text x="672" y="45" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Prompt Engineering</text>
-  <text x="672" y="78" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="18" fill="#888" text-anchor="middle">Crafting effective inputs to guide LLM behavior</text>
+  <text x="672" y="78" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="18" fill="#ccc" text-anchor="middle">Crafting effective inputs to guide LLM behavior</text>
 
   <!-- Zero-Shot vs Few-Shot -->
   <g transform="translate(80, 110)">
@@ -48,28 +48,28 @@
     <g transform="translate(20, 70)">
       <rect x="0" y="0" width="170" height="110" rx="8" fill="#1a1a2e"/>
       <text x="85" y="25" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Zero-Shot</text>
-      <text x="85" y="50" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">"Translate to French:"</text>
-      <text x="85" y="70" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">"Hello world"</text>
-      <text x="85" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#666" text-anchor="middle">No examples provided</text>
+      <text x="85" y="50" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#ccc" text-anchor="middle">"Translate to French:"</text>
+      <text x="85" y="70" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#ccc" text-anchor="middle">"Hello world"</text>
+      <text x="85" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#aaa" text-anchor="middle">No examples provided</text>
     </g>
 
     <!-- One-shot -->
     <g transform="translate(205, 70)">
       <rect x="0" y="0" width="170" height="110" rx="8" fill="#1a1a2e"/>
       <text x="85" y="25" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4" text-anchor="middle">One-Shot</text>
-      <text x="85" y="48" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#888" text-anchor="middle">"Good→Bon"</text>
-      <text x="85" y="65" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#888" text-anchor="middle">"Hello world→?"</text>
-      <text x="85" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#666" text-anchor="middle">1 example provided</text>
+      <text x="85" y="48" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ccc" text-anchor="middle">"Good→Bon"</text>
+      <text x="85" y="65" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ccc" text-anchor="middle">"Hello world→?"</text>
+      <text x="85" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#aaa" text-anchor="middle">1 example provided</text>
     </g>
 
     <!-- Few-shot -->
     <g transform="translate(390, 70)">
       <rect x="0" y="0" width="170" height="110" rx="8" fill="#1a1a2e"/>
       <text x="85" y="25" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Few-Shot</text>
-      <text x="85" y="45" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#888" text-anchor="middle">"Good→Bon"</text>
-      <text x="85" y="58" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#888" text-anchor="middle">"Cat→Chat"</text>
-      <text x="85" y="71" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#888" text-anchor="middle">"Hello→?"</text>
-      <text x="85" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#666" text-anchor="middle">2-5+ examples</text>
+      <text x="85" y="45" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ccc" text-anchor="middle">"Good→Bon"</text>
+      <text x="85" y="58" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ccc" text-anchor="middle">"Cat→Chat"</text>
+      <text x="85" y="71" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ccc" text-anchor="middle">"Hello→?"</text>
+      <text x="85" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#aaa" text-anchor="middle">2-5+ examples</text>
     </g>
   </g>
 
@@ -85,20 +85,20 @@
       <!-- Standard -->
       <rect x="0" y="0" width="240" height="110" rx="8" fill="#1a1a2e"/>
       <text x="120" y="20" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Standard Prompt</text>
-      <text x="120" y="45" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#888" text-anchor="middle">"Q: 15 + 27 × 3 = ?"</text>
+      <text x="120" y="45" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#ccc" text-anchor="middle">"Q: 15 + 27 × 3 = ?"</text>
       <text x="120" y="70" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#ff6b6b" text-anchor="middle">A: 126 ✗</text>
-      <text x="120" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="9" fill="#666" text-anchor="middle">Direct answer (error-prone)</text>
+      <text x="120" y="95" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">Direct answer (error-prone)</text>
     </g>
 
     <g transform="translate(300, 70)">
       <!-- CoT -->
       <rect x="0" y="0" width="240" height="110" rx="8" fill="#1a1a2e"/>
       <text x="120" y="20" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#4ecdc4" text-anchor="middle">CoT Prompt</text>
-      <text x="120" y="40" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#888" text-anchor="middle">"Let's think step by step..."</text>
+      <text x="120" y="40" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ccc" text-anchor="middle">"Let's think step by step..."</text>
       <text x="120" y="55" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ffd700" text-anchor="middle">1. 27 × 3 = 81</text>
       <text x="120" y="70" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#ffd700" text-anchor="middle">2. 15 + 81 = 96</text>
       <text x="120" y="85" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4ecdc4" text-anchor="middle">A: 96 ✓</text>
-      <text x="120" y="100" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="9" fill="#666" text-anchor="middle">Reasoning steps shown</text>
+      <text x="120" y="100" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="9" fill="#aaa" text-anchor="middle">Reasoning steps shown</text>
     </g>
   </g>
 
@@ -149,25 +149,25 @@
     <g transform="translate(20, 70)">
       <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
       <text x="160" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#ff6b6b" text-anchor="middle">Self-Consistency</text>
-      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#888" text-anchor="middle">Generate multiple answers, vote for consensus</text>
+      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#ccc" text-anchor="middle">Generate multiple answers, vote for consensus</text>
     </g>
 
     <g transform="translate(20, 135)">
       <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
       <text x="160" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#4ecdc4" text-anchor="middle">Tree of Thought (ToT)</text>
-      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#888" text-anchor="middle">Explore multiple reasoning branches</text>
+      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#ccc" text-anchor="middle">Explore multiple reasoning branches</text>
     </g>
 
     <g transform="translate(20, 200)">
       <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
       <text x="160" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#ffd700" text-anchor="middle">ReAct (Reason + Act)</text>
-      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#888" text-anchor="middle">Interleave reasoning with tool use</text>
+      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#ccc" text-anchor="middle">Interleave reasoning with tool use</text>
     </g>
 
     <g transform="translate(20, 265)">
       <rect x="0" y="0" width="320" height="55" rx="8" fill="#1a1a2e"/>
       <text x="160" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#9966cc" text-anchor="middle">Constitutional AI</text>
-      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#888" text-anchor="middle">Self-critique against principles</text>
+      <text x="160" y="42" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#ccc" text-anchor="middle">Self-critique against principles</text>
     </g>
   </g>
 
@@ -181,43 +181,43 @@
     <g transform="translate(20, 70)">
       <circle r="6" cx="6" cy="6" fill="#4ecdc4"/>
       <text x="20" y="10" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#4ecdc4">Be Specific</text>
-      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">Clear instructions reduce ambiguity</text>
+      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">Clear instructions reduce ambiguity</text>
     </g>
 
     <g transform="translate(20, 115)">
       <circle r="6" cx="6" cy="6" fill="#ffd700"/>
       <text x="20" y="10" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#ffd700">Use Delimiters</text>
-      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">```, ###, --- separate sections</text>
+      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">```, ###, --- separate sections</text>
     </g>
 
     <g transform="translate(20, 160)">
       <circle r="6" cx="6" cy="6" fill="#ff6b6b"/>
       <text x="20" y="10" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#ff6b6b">Specify Output Format</text>
-      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">JSON, markdown, bullet points</text>
+      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">JSON, markdown, bullet points</text>
     </g>
 
     <g transform="translate(20, 205)">
       <circle r="6" cx="6" cy="6" fill="#9966cc"/>
       <text x="20" y="10" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#9966cc">Give the Model an "Out"</text>
-      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">"If unsure, say 'I don't know'"</text>
+      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">"If unsure, say 'I don't know'"</text>
     </g>
 
     <g transform="translate(20, 250)">
       <circle r="6" cx="6" cy="6" fill="#4a9eff"/>
       <text x="20" y="10" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#4a9eff">Iterate and Refine</text>
-      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">Test, evaluate, improve prompts</text>
+      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">Test, evaluate, improve prompts</text>
     </g>
 
     <g transform="translate(20, 295)">
       <circle r="6" cx="6" cy="6" fill="#4ecdc4"/>
       <text x="20" y="10" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#4ecdc4">Consider Temperature</text>
-      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">Low for accuracy, high for creativity</text>
+      <text x="20" y="28" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">Low for accuracy, high for creativity</text>
     </g>
   </g>
 
   <!-- Footer note -->
   <g transform="translate(672, 720)">
-    <text font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#666" text-anchor="middle">
+    <text font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#aaa" text-anchor="middle">
       Prompt engineering is a skill that dramatically impacts LLM performance without changing model weights
     </text>
   </g>

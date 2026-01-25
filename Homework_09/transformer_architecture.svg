@@ -34,10 +34,10 @@
     </filter>
 
     <marker id="arrowUp" markerWidth="8" markerHeight="6" refX="4" refY="6" orient="auto">
-      <polygon points="0 6, 4 0, 8 6" fill="#666"/>
+      <polygon points="0 6, 4 0, 8 6" fill="#aaa"/>
     </marker>
     <marker id="arrowRight" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#666"/>
+      <polygon points="0 0, 8 3, 0 6" fill="#aaa"/>
     </marker>
   </defs>
 
@@ -46,7 +46,7 @@
 
   <!-- Title -->
   <text x="672" y="40" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">Transformer Architecture</text>
-  <text x="672" y="70" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="18" fill="#888" text-anchor="middle">"Attention Is All You Need" (Vaswani et al., 2017)</text>
+  <text x="672" y="70" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="18" fill="#ccc" text-anchor="middle">"Attention Is All You Need" (Vaswani et al., 2017)</text>
 
   <!-- Encoder Stack -->
   <g transform="translate(200, 100)">
@@ -102,7 +102,7 @@
 
     <!-- Input arrow -->
     <line x1="125" y1="440" x2="125" y2="420" stroke="#4a9eff" stroke-width="2"/>
-    <text x="125" y="460" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#888" text-anchor="middle">Inputs</text>
+    <text x="125" y="460" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#ccc" text-anchor="middle">Inputs</text>
   </g>
 
   <!-- Decoder Stack -->
@@ -177,7 +177,7 @@
 
     <!-- Output Probabilities -->
     <g transform="translate(50, 500)">
-      <text x="125" y="15" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#888" text-anchor="middle">Output Probabilities</text>
+      <text x="125" y="15" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#ccc" text-anchor="middle">Output Probabilities</text>
     </g>
 
     <!-- Output Embedding -->
@@ -188,7 +188,7 @@
 
     <!-- Input arrow -->
     <line x1="175" y1="590" x2="175" y2="570" stroke="#4a9eff" stroke-width="2"/>
-    <text x="175" y="610" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#888" text-anchor="middle">Outputs (shifted right)</text>
+    <text x="175" y="610" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#ccc" text-anchor="middle">Outputs (shifted right)</text>
   </g>
 
   <!-- Key Innovations Box -->
@@ -201,25 +201,25 @@
     <g transform="translate(20, 65)">
       <circle r="6" fill="#ffd700"/>
       <text x="15" y="5" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#ffd700">Self-Attention</text>
-      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">Captures relationships in parallel</text>
+      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">Captures relationships in parallel</text>
     </g>
 
     <g transform="translate(20, 115)">
       <circle r="6" fill="#4ecdc4"/>
       <text x="15" y="5" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#4ecdc4">Positional Encoding</text>
-      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">Injects sequence order info</text>
+      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">Injects sequence order info</text>
     </g>
 
     <g transform="translate(20, 165)">
       <circle r="6" fill="#ff6b6b"/>
       <text x="15" y="5" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#ff6b6b">Masked Attention</text>
-      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">Prevents looking at future tokens</text>
+      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">Prevents looking at future tokens</text>
     </g>
 
     <g transform="translate(20, 215)">
       <circle r="6" fill="#9966cc"/>
       <text x="15" y="5" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#9966cc">Residual Connections</text>
-      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#888">Enable training deep networks</text>
+      <text x="15" y="22" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="11" fill="#ccc">Enable training deep networks</text>
     </g>
   </g>
 
@@ -232,7 +232,7 @@
 
     <text x="150" y="65" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#4a9eff" text-anchor="middle">PE(pos, 2i) = sin(pos/10000^(2i/d))</text>
     <text x="150" y="85" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#4a9eff" text-anchor="middle">PE(pos, 2i+1) = cos(pos/10000^(2i/d))</text>
-    <text x="150" y="108" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#888" text-anchor="middle">Sinusoidal functions encode position</text>
+    <text x="150" y="108" font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="10" fill="#ccc" text-anchor="middle">Sinusoidal functions encode position</text>
   </g>
 
   <!-- Model Variants -->
@@ -263,7 +263,7 @@
 
   <!-- Footer -->
   <g transform="translate(672, 720)">
-    <text font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#666" text-anchor="middle">
+    <text font-family="SF Pro Display, SF Pro, -apple-system, sans-serif" font-size="13" fill="#aaa" text-anchor="middle">
       The foundation of modern LLMs: GPT, BERT, T5, Claude, ChatGPT, and more
     </text>
   </g>
