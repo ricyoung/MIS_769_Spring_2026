@@ -8,12 +8,12 @@
 
 ---
 
-## Learning Objectives
+## What You'll Learn
 
-1. **Connect** to real-world data sources using Python
-2. **Load and explore** datasets using Pandas
-3. **Assess data quality** by identifying missing values, duplicates, and outliers
-4. **Discover and communicate** an interesting finding from data
+1. Connect Google Colab to external data sources (Kaggle/HuggingFace)
+2. Load and explore large datasets with pandas
+3. Perform **Data Quality Assessment** (missing values, duplicates, outliers)
+4. **Find Something Interesting** in your data
 
 ---
 
@@ -31,15 +31,13 @@
 
 ## Grading
 
-| Component | Points | Effort | What We're Looking For |
-|-----------|--------|--------|------------------------|
-| Data Connection | 5 | * | Load data from any source into a DataFrame |
-| Data Exploration | 5 | * | Answer questions about dataset structure |
-| Quality Assessment | 5 | ** | Analyze missing values, duplicates, outliers |
-| Interesting Finding | 5 | ** | One insight with evidence and business relevance |
-| **Total** | **20** | |
-
-**Effort Key:** * Straightforward | ** Requires thinking | *** Challenge
+| Part | Component | Points | What We're Looking For |
+|------|-----------|--------|------------------------|
+| 1 | Environment Setup | 3 | Install packages, import libraries |
+| 2 | Load Your Data | 4 | Load data from HuggingFace or Kaggle |
+| 3 | Data Quality Assessment | 8 | Analyze missing values, duplicates, outliers |
+| 4 | Find Something Interesting | 5 | One insight with evidence and explanation |
+| | **Total** | **20** | |
 
 ---
 
@@ -144,10 +142,12 @@ ParserError: Error tokenizing data
 
 ## Questions to Answer
 
-- **Q1:** What is the shape of your dataset? What do the rows and columns represent?
-- **Q2:** Which columns have missing values? What percentage?
-- **Q3:** What data quality issues did you find? How would you address them?
-- **Q4:** What interesting finding did you discover? Why does it matter for business?
+Answer all four questions below based on your work in this notebook.
+
+- **Q1:** Which data source did you use (Kaggle or HuggingFace)? Why did you choose it?
+- **Q2:** What did you learn from exploring your dataset with `.describe()` and `.value_counts()`?
+- **Q3:** What data quality issues did you find (missing values, duplicates, outliers)? How might these affect analysis?
+- **Q4:** What interesting pattern or insight did you discover in your data? Why is it interesting or surprising?
 
 ---
 
