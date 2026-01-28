@@ -10,11 +10,10 @@
 
 ## Learning Objectives
 
-1. **Install and use** NLP libraries (spaCy, NLTK) in Google Colab
+1. **Install and use** NLP libraries (spaCy, NLTK)
 2. **Understand** WHY we preprocess text (not just how)
 3. **Create** domain-specific stopwords for your data
-4. **Measure** the impact of text cleaning on analysis
-5. **Identify** cases where cleaning hurts your analysis
+4. **Identify** cases where cleaning hurts your analysis
 
 ---
 
@@ -116,6 +115,7 @@ LookupError: Resource stopwords not found.
 - **Q1:** Which removed stopwords might carry meaning in your domain?
 - **Q2:** Why did you choose each domain-specific stopword?
 - **Q3:** When should you preserve vs. remove negations?
+- **Q4:** Give an example where aggressive text cleaning would HURT your analysis results.
 
 ---
 

@@ -8,11 +8,11 @@
 
 ---
 
-## What You'll Learn
+## Learning Objectives
 
-1. Connect Google Colab to external data sources (Kaggle/HuggingFace)
-2. Load and explore large datasets with pandas
-3. Perform **Data Quality Assessment** (missing values, duplicates, outliers)
+1. **Connect** Google Colab to external data sources (Kaggle/HuggingFace)
+2. **Load and explore** large datasets with pandas
+3. **Perform** Data Quality Assessment (missing values, duplicates, outliers)
 4. **Find Something Interesting** in your data
 
 ---
@@ -31,17 +31,26 @@
 
 ## Grading
 
-| Part | Component | Points | What We're Looking For |
-|------|-----------|--------|------------------------|
-| 1 | Environment Setup | 3 | Install packages, import libraries |
-| 2 | Load Your Data | 4 | Load data from HuggingFace or Kaggle |
-| 3 | Data Quality Assessment | 8 | Analyze missing values, duplicates, outliers |
-| 4 | Find Something Interesting | 5 | One insight with evidence and explanation |
-| | **Total** | **20** | |
+| Component | Points | Effort | What We're Looking For |
+|-----------|--------|--------|------------------------|
+| Environment Setup | 3 | * | Install packages, import libraries |
+| Load Your Data | 4 | * | Load data from HuggingFace or Kaggle |
+| Data Quality Assessment | 8 | ** | Analyze missing values, duplicates, outliers |
+| Find Something Interesting | 5 | ** | One insight with evidence and explanation |
+| **Total** | **20** | |
+
+**Effort Key:** * Straightforward | ** Requires thinking | *** Challenge
 
 ---
 
-![Data Pipeline Flow](data_pipeline_flow.png)
+## The Big Picture
+
+The Data Processing Pipeline transforms raw data into actionable insights:
+
+1. **Load Data** - Connect to external sources (HuggingFace, Kaggle)
+2. **Clean Data** - Identify missing values, duplicates, outliers
+3. **Explore** - Use `.describe()`, `.value_counts()` to understand structure
+4. **Insight** - Find patterns that drive business decisions
 
 ---
 
