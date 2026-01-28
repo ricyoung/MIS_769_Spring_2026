@@ -145,6 +145,7 @@ OSError: [E050] Can't find model 'en_core_web_sm'
 - **Q1:** Were the extracted entities accurate? What errors did you observe?
 - **Q2:** What business insights can you derive from entity mentions?
 - **Q3:** How could you improve NER for your specific domain?
+- **Q4:** What patterns did you observe in the entity distributions? Were there any surprising co-occurrences?
 
 ---
 
