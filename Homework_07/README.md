@@ -4,7 +4,7 @@
 
 **Author:** Richard Young, Ph.D. | UNLV Lee Business School
 
-**Compute:** CPU (free tier) — GPU recommended
+**Compute:** GPU recommended (free Colab T4) — CPU works but slower
 
 ---
 
@@ -289,8 +289,8 @@ def rag_answer(query):
 
 # Alternative: Use HuggingFace model (free, no API key)
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
-t5_model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
+tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-large")
+t5_model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-large")
 ```
 
 **RAG Architecture Components:**
