@@ -112,7 +112,7 @@ User Query → Embed → Search Vector DB → Retrieve Top-K Docs
 ## Instructions
 
 1. Open `MIS769_HW7_RAG_System.ipynb` in Google Colab
-2. Load your document corpus (reviews, articles, or provided dataset)
+2. Load the Investopedia financial terms dataset
 3. Chunk documents into retrievable segments
 4. Create embeddings and build a vector index
 5. Implement retrieval: given a query, find relevant chunks
@@ -241,7 +241,7 @@ chunks = splitter.split_documents(documents)
 # 2. CREATE EMBEDDINGS
 from sentence_transformers import SentenceTransformer
 
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('BAAI/bge-small-en-v1.5')
 chunk_texts = [c.page_content for c in chunks]
 embeddings = model.encode(chunk_texts)
 
@@ -288,8 +288,9 @@ def rag_answer(query):
     return response.choices[0].message.content
 
 # Alternative: Use HuggingFace model (free, no API key)
-from transformers import pipeline
-generator = pipeline("text-generation", model="google/flan-t5-base")
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
+t5_model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-base")
 ```
 
 **RAG Architecture Components:**
