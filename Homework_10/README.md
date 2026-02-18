@@ -4,15 +4,15 @@
 
 **Author:** Richard Young, Ph.D. | UNLV Lee Business School
 
-**Compute:** CPU (free tier)
+**Compute:** CPU (free tier) — Uses OpenRouter API (no local GPU needed)
 
 ---
 
 ## Learning Objectives
 
 1. **Understand** what AI agents are and how they work
-2. **Build** an agent that can use tools to accomplish tasks
-3. **Design** agents for specific business workflows
+2. **Build** an agent that uses **native tool calling** via an LLM API
+3. **Design** tools as **JSON schemas** — the industry standard
 4. **Implement** the ReAct (Reasoning + Acting) pattern
 5. **Evaluate** agent behavior and handle failures gracefully
 
@@ -34,11 +34,11 @@
 
 | Component | Points | Effort | What We're Looking For |
 |-----------|--------|--------|------------------------|
-| Agent Setup | 3 | * | Basic agent with tool access |
-| Tool Design | 5 | ** | Useful, well-defined tools |
-| ReAct Loop | 5 | ** | Reasoning → Action → Observation cycle |
-| Business Task | 5 | ** | Solve a real business problem |
-| Error Handling | 2 | * | Graceful failure, retry logic |
+| Agent Setup | 3 | * | OpenRouter + Qwen connection working |
+| Tool Design | 5 | ** | JSON schemas + Python functions |
+| ReAct Loop | 5 | ** | Tool calling → Observation → Reasoning cycle |
+| Business Task | 5 | ** | Multi-step business scenarios |
+| Error Handling | 2 | * | Graceful failure on invalid inputs |
 | **Total** | **20** | |
 
 **Effort Key:** * Straightforward | ** Requires thinking | *** Challenge
@@ -75,86 +75,89 @@ Unlike simple LLM calls, agents can:
 
 ---
 
+## Prerequisites
+
+You need a free OpenRouter API key:
+1. Go to [openrouter.ai](https://openrouter.ai) and create an account
+2. Navigate to **Keys** and create a new API key
+3. In Google Colab, click the **key icon** in the left sidebar
+4. Add a secret named `OPENROUTER_API_KEY` with your key
+
 ## Instructions
 
 1. Open `MIS769_HW10_Business_Agent.ipynb` in Google Colab
-2. Understand the ReAct pattern
-3. Define 2-3 tools your agent can use
-4. Build the agent loop
-5. Test on a business scenario
+2. Add your OpenRouter API key to Colab secrets
+3. Understand the ReAct pattern and JSON tool calling format
+4. Run the agent on business scenarios
+5. Observe how the LLM autonomously selects and calls tools
 6. Document the agent's reasoning and actions
 
 ---
 
 ## What Your Output Should Look Like
 
-**Agent Tools:**
+**Agent Tools (JSON Schema Format):**
 ```
-🔧 AVAILABLE TOOLS
+✅ 5 tool schemas defined
+
+Example schema (search_products):
+{
+  "type": "function",
+  "function": {
+    "name": "search_products",
+    "description": "Search for products by name, category, or keyword.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {"type": "string", "description": "Search term"}
+      },
+      "required": ["query"]
+    }
+  }
+}
+```
+
+**Agent Execution (Tool Calling):**
+```
+📋 TASK: "Find the cheapest laptop in stock and tell me about it."
 ============================================================
-1. search_products(query) → List of matching products
-2. get_price(product_id) → Current price
-3. check_inventory(product_id) → Stock status
-4. calculate_discount(price, percent) → Discounted price
-```
 
-**Agent Execution (ReAct Pattern):**
-```
-📋 TASK: "Find the cheapest laptop with at least 16GB RAM in stock"
+🔨 ACTION: search_products({"query": "laptop"})
+👁️ OBSERVATION: [{"product_id":"LP001","name":"TechPro Laptop 15\"","price":899.99,...}, ...]
 
-🤔 THOUGHT 1: I need to search for laptops with 16GB RAM first.
-🔨 ACTION: search_products("laptop 16GB RAM")
-👁️ OBSERVATION: Found 5 products: [LP001, LP002, LP003, LP004, LP005]
+🔨 ACTION: filter_by_price({"min_price": 0, "max_price": 500})
+👁️ OBSERVATION: [{"product_id":"LP004","name":"BudgetBook 15\"","price":399.99,...}]
 
-🤔 THOUGHT 2: Now I need to check prices for all these products.
-🔨 ACTION: get_price("LP001")
-👁️ OBSERVATION: $899
-
-🔨 ACTION: get_price("LP002")
-👁️ OBSERVATION: $749
-
-🔨 ACTION: get_price("LP003")
-👁️ OBSERVATION: $1,299
-
-🔨 ACTION: get_price("LP004")
-👁️ OBSERVATION: $649
-
-🔨 ACTION: get_price("LP005")
-👁️ OBSERVATION: $799
-
-🤔 THOUGHT 3: LP004 is cheapest at $649. Let me verify it's in stock.
-🔨 ACTION: check_inventory("LP004")
-👁️ OBSERVATION: In Stock (23 units)
-
-🤔 THOUGHT 4: LP004 is the cheapest at $649 and is in stock. Task complete.
+🔨 ACTION: check_stock({"product_id": "LP004"})
+👁️ OBSERVATION: {"product_id":"LP004","name":"BudgetBook 15\"","stock":42,"in_stock":true}
 
 ✅ FINAL ANSWER:
-The cheapest laptop with 16GB RAM that's in stock is LP004
-(TechPro UltraBook) at $649. There are 23 units available.
+The cheapest laptop in stock is the BudgetBook 15" (LP004) at $399.99.
+There are 42 units available. It features 4GB RAM, 128GB SSD, and
+has a 3.8/5 rating — a solid budget option.
 ```
 
 **Business Scenario:**
 ```
-📊 BUSINESS AGENT: Customer Support
+📋 TASK: "I need to set up a home office. I want a laptop, a monitor,
+and a laptop stand. Find me options and tell me the total cost."
 ============================================================
-Customer: "I ordered product #12345 last week and it hasn't
-arrived. Can you help?"
 
-Agent Trace:
-1. THINK: Need to look up order status
-2. ACTION: lookup_order("12345")
-3. OBSERVE: Order shipped 3 days ago, tracking: TRK789
-4. THINK: Should check delivery status
-5. ACTION: check_tracking("TRK789")
-6. OBSERVE: Package delayed, expected tomorrow
-7. THINK: Should offer resolution
-8. ACTION: apply_credit(order_id="12345", amount=10)
-9. OBSERVE: $10 credit applied successfully
+🔨 ACTION: search_products({"query": "laptop"})
+👁️ OBSERVATION: [4 laptops found with prices $399-$1299]
 
-RESPONSE: "I found your order #12345. It shipped 3 days ago but
-is experiencing a slight delay—it should arrive tomorrow.
-I've applied a $10 credit to your account for the inconvenience.
-Would you like me to email you the tracking link?"
+🔨 ACTION: search_products({"query": "monitor"})
+👁️ OBSERVATION: [3 monitors found with prices $299-$549]
+
+🔨 ACTION: get_product_details({"product_id": "AC004"})
+👁️ OBSERVATION: {"name":"Laptop Stand Aluminum","price":34.99,...}
+
+✅ FINAL ANSWER:
+Here's a recommended mid-range home office setup:
+- UltraBook Pro 14" (LP002): $649.99
+- 4K Monitor 27" (MN002): $349.99
+- Laptop Stand Aluminum (AC004): $34.99
+Total: $1,034.97
 ```
 
 ---
@@ -206,94 +209,68 @@ Let the agent learn from failures. If a tool call fails, have it record the mist
 ## Quick Reference
 
 ```python
-# Install dependencies
-!pip install openai langchain
+# Install dependency (only openai — it works with OpenRouter too)
+!pip install openai
 
-# 1. DEFINE TOOLS
+# 1. SETUP CLIENT (OpenRouter = OpenAI-compatible API)
+from openai import OpenAI
+client = OpenAI(
+    base_url="https://openrouter.ai/api/v1",
+    api_key="your-api-key-here",
+)
+MODEL = "qwen/qwen3-8b:free"  # Free model with tool calling
+
+# 2. DEFINE TOOLS AS JSON SCHEMAS
 tools = [
     {
-        "name": "search_products",
-        "description": "Search for products by keyword. Returns list of product IDs.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "query": {"type": "string", "description": "Search query"}
-            },
-            "required": ["query"]
-        }
-    },
-    {
-        "name": "get_price",
-        "description": "Get the current price for a product.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "product_id": {"type": "string", "description": "Product ID"}
-            },
-            "required": ["product_id"]
+        "type": "function",
+        "function": {
+            "name": "search_products",
+            "description": "Search for products by keyword.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {"type": "string", "description": "Search term"}
+                },
+                "required": ["query"]
+            }
         }
     }
 ]
 
-# 2. IMPLEMENT TOOLS
+# 3. IMPLEMENT TOOL FUNCTIONS
 def search_products(query):
-    # Simulated product search
-    return ["LP001", "LP002", "LP003"]
+    return json.dumps([{"id": "LP001", "name": "Laptop", "price": 899}])
 
-def get_price(product_id):
-    prices = {"LP001": 899, "LP002": 749, "LP003": 1299}
-    return prices.get(product_id, "Not found")
+TOOL_FUNCTIONS = {"search_products": search_products}
 
-def execute_tool(name, args):
-    if name == "search_products":
-        return search_products(args["query"])
-    elif name == "get_price":
-        return get_price(args["product_id"])
-
-# 3. BUILD AGENT LOOP
-from openai import OpenAI
-client = OpenAI()
-
+# 4. BUILD AGENT LOOP
 def run_agent(task, max_steps=10):
     messages = [
-        {"role": "system", "content": """You are a helpful agent.
-        Think step by step. Use tools when needed.
-        Format: THOUGHT: [reasoning] then ACTION: [tool_name(args)]"""},
-        {"role": "user", "content": task}
+        {"role": "system", "content": "You are a helpful assistant. Use tools."},
+        {"role": "user", "content": task},
     ]
-
     for step in range(max_steps):
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=messages,
-            tools=tools
+            model=MODEL, messages=messages, tools=tools, tool_choice="auto",
         )
+        msg = response.choices[0].message
 
-        message = response.choices[0].message
-
-        if message.tool_calls:
-            # Execute tool
-            tool = message.tool_calls[0]
-            result = execute_tool(
-                tool.function.name,
-                eval(tool.function.arguments)
-            )
-            messages.append(message)
-            messages.append({
-                "role": "tool",
-                "tool_call_id": tool.id,
-                "content": str(result)
-            })
-            print(f"ACTION: {tool.function.name}")
-            print(f"OBSERVATION: {result}")
+        if msg.tool_calls:
+            messages.append(msg)  # Must append assistant msg first!
+            for tc in msg.tool_calls:
+                args = json.loads(tc.function.arguments)
+                result = TOOL_FUNCTIONS[tc.function.name](**args)
+                messages.append({
+                    "role": "tool",
+                    "tool_call_id": tc.id,
+                    "content": result,
+                })
         else:
-            # Final answer
-            print(f"FINAL: {message.content}")
-            return message.content
-
+            return msg.content  # Final answer
     return "Max steps reached"
 
-# 4. RUN AGENT
+# 5. RUN
 run_agent("Find the cheapest product in our catalog")
 ```
 
