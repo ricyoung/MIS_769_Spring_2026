@@ -1,8 +1,9 @@
 <h2>Objective</h2>
-<p>Your task is to <strong>find a text dataset, explore it, and explain what you found</strong> — using Python (Colab) and the NLP techniques we've been learning.</p>
+<p>Your task is to <strong>find a dataset, explore it, and explain what you found</strong> — using Python (Colab) and the techniques we've been learning.</p>
 <p>This is what you do in any startup, business analysis, or research role: you find data, you clean it, you analyze it, and you explain what it means. <strong>Think of this like a startup pitch</strong> — you found interesting data, you dug into it, and now you're telling someone why it matters.</p>
 <p>This assignment is intentionally open-ended. You choose the data. You choose the questions. You decide what's worth investigating.</p>
 <p><strong>Questions? Email me: <a href="mailto:ryoung@unlv.edu">ryoung@unlv.edu</a></strong></p>
+<p>If you want feedback on a draft, email it to me <strong>at least 4 days</strong> before the due date.</p>
 
 <hr>
 
@@ -10,14 +11,14 @@
 <ol>
 <li><strong>A PDF/Word report</strong> summarizing your key findings (2–4 pages, more is fine)</li>
 <li><strong>Your Colab notebook</strong> (.ipynb) with the analysis code</li>
-<li><strong>At least one visualization</strong> (word cloud, frequency chart, sentiment plot, etc.)</li>
+<li><strong>At least one visualization</strong> (charts, graphs, word clouds, maps — whatever tells your story)</li>
 <li><strong>The data</strong> or a link to it</li>
 </ol>
 
 <hr>
 
 <h2>Sample Reports</h2>
-<p>Not sure what a good submission looks like? These are real reports from previous students. Notice how each one states a problem, describes the data and cleaning, shows visualizations, and wraps up with a conclusion:</p>
+<p>Not sure what a good submission looks like? These are real reports from previous students (they used Excel, but yours will use Python/Colab — same structure). Notice how each one states a problem, describes the data and cleaning, shows visualizations, and wraps up with a conclusion:</p>
 <ul>
 <li><a href="https://github.com/ricyoung/MIS_769_Spring_2026/raw/main/Analyze_Me_01/Analyze_Me_1.pdf" target="_blank">Sample #1 — Airline Delays to Las Vegas</a></li>
 <li><a href="https://github.com/ricyoung/MIS_769_Spring_2026/raw/main/Analyze_Me_01/Analyze_Me_2.pdf" target="_blank">Sample #2 — Real Estate Business Insights</a></li>
@@ -27,38 +28,32 @@
 <hr>
 
 <h2>Choosing Your Dataset</h2>
-<p><strong>Use any text dataset that interests you.</strong> The best projects come from students who pick something they're genuinely curious about. Here are some ideas to get you started:</p>
+<p><strong>Use any dataset that interests you.</strong> It doesn't have to be text or NLP — it can be anything: sales data, weather, sports, finance, health, real estate, whatever you're curious about. The best projects come from students who pick something they genuinely want to explore. Here are some ideas:</p>
 
-<h3>Customer Reviews &amp; Feedback</h3>
+<h3>Text &amp; NLP</h3>
 <ul>
-<li><a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews" target="_blank">Amazon Fine Food Reviews</a> (Kaggle) — 500K+ reviews with ratings, helpfulness votes</li>
-<li><a href="https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset" target="_blank">Yelp Business Reviews</a> (Kaggle) — restaurant/business reviews with stars, location</li>
-<li>App Store or Google Play reviews for an app you use</li>
+<li><a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews" target="_blank">Amazon Fine Food Reviews</a> — 500K+ reviews with ratings</li>
+<li><a href="https://www.kaggle.com/datasets/kazanova/sentiment140" target="_blank">Twitter Sentiment (Sentiment140)</a> — 1.6M tweets with sentiment labels</li>
+<li><a href="https://www.kaggle.com/datasets/rmisra/news-category-dataset" target="_blank">HuffPost News Categories</a> — 200K+ headlines with categories</li>
+<li><a href="https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset" target="_blank">Fake vs. Real News</a> — can you tell them apart?</li>
 </ul>
 
-<h3>News &amp; Media</h3>
+<h3>Business &amp; Finance</h3>
 <ul>
-<li><a href="https://www.kaggle.com/datasets/rmisra/news-category-dataset" target="_blank">HuffPost News Categories</a> (Kaggle) — 200K+ headlines with categories</li>
-<li><a href="https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset" target="_blank">Fake vs. Real News</a> (Kaggle) — can you tell them apart with NLP?</li>
-<li>Reddit posts from a subreddit (use the API or a Kaggle dump)</li>
+<li><a href="https://www.kaggle.com/datasets/mikhail1681/walmart-sales" target="_blank">Walmart Sales</a> — weekly sales with holidays, temperature, fuel prices</li>
+<li><a href="https://www.kaggle.com/datasets/neharoychoudhury/credit-card-fraud-data" target="_blank">Credit Card Fraud</a> — transaction data with fraud labels</li>
+<li>SEC filings, earnings call transcripts, stock prices</li>
+<li>Job postings, salary data, real estate listings</li>
 </ul>
 
-<h3>Social Media &amp; Conversations</h3>
+<h3>Science, Health &amp; Society</h3>
 <ul>
-<li><a href="https://www.kaggle.com/datasets/kazanova/sentiment140" target="_blank">Twitter Sentiment (Sentiment140)</a> (Kaggle) — 1.6M tweets with sentiment labels</li>
-<li><a href="https://www.kaggle.com/datasets/datasnaek/youtube" target="_blank">YouTube Comments</a> (Kaggle) — comments from trending videos</li>
-<li>Your own text messages, emails, or chat exports (anonymized)</li>
+<li><a href="https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package" target="_blank">Australian Weather</a> — 10 years of daily weather observations</li>
+<li>COVID data, hospital records, air quality, crime stats</li>
+<li>Sports analytics, streaming data, social media trends</li>
 </ul>
 
-<h3>Business &amp; Domain-Specific</h3>
-<ul>
-<li><a href="https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews" target="_blank">IMDB Movie Reviews</a> (Kaggle) — 50K labeled movie reviews</li>
-<li>Job postings from Indeed/LinkedIn (scrape or find a dataset)</li>
-<li>SEC filings, earnings call transcripts, or financial news</li>
-<li>Medical/clinical text, legal documents, or song lyrics</li>
-</ul>
-
-<p><strong>More sources:</strong> <a href="https://huggingface.co/datasets" target="_blank">HuggingFace Datasets</a> | <a href="https://www.kaggle.com/datasets?tags=13204-NLP" target="_blank">Kaggle NLP Datasets</a> | <a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Awesome Public Datasets</a></p>
+<p><strong>More sources:</strong> <a href="https://www.kaggle.com/datasets" target="_blank">Kaggle</a> | <a href="https://huggingface.co/datasets" target="_blank">HuggingFace Datasets</a> | <a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Awesome Public Datasets</a></p>
 
 <hr>
 
@@ -70,7 +65,7 @@
 <li><strong>The Problem:</strong> What question are you trying to answer? Why does this topic matter? <em>(Even one sentence is fine — just give me the "why.")</em></li>
 <li><strong>The Data:</strong> What dataset did you find? Where did it come from? How big is it?</li>
 <li><strong>The Cleaning:</strong> What did you have to fix, remove, or transform — <strong>and why?</strong> Don't just say "I removed stopwords." Tell me <em>why</em> you removed them and what difference it made.</li>
-<li><strong>The Analysis:</strong> What NLP techniques did you apply? What do your visualizations show?</li>
+<li><strong>The Analysis:</strong> What techniques did you apply? What do your visualizations show?</li>
 <li><strong>The Conclusion:</strong> What did you find? Does it answer your original question? What surprised you? What would you do next?</li>
 </ol>
 
@@ -108,7 +103,7 @@
 <tr>
 <td><strong>Analysis &amp; Visualizations</strong></td>
 <td style="text-align: center;">15</td>
-<td>You applied NLP techniques, created meaningful visualizations, and found something interesting</td>
+<td>You applied analytical techniques, created meaningful visualizations, and found something interesting</td>
 </tr>
 <tr>
 <td><strong>Conclusion &amp; Communication</strong></td>
@@ -123,10 +118,10 @@
 
 <h2>Tips</h2>
 <ul>
-<li><strong>Use what we've learned</strong> — spaCy, NLTK, HuggingFace, word clouds, sentiment analysis, NER. You've already done this in HW1–3.</li>
+<li><strong>Use what we've learned</strong> — pandas, matplotlib, seaborn for any data. For text data: spaCy, NLTK, HuggingFace, word clouds, sentiment, NER.</li>
 <li><strong>Start simple</strong> — load the data, look at it, clean it. Don't jump to fancy models before understanding your data.</li>
 <li><strong>One good question beats ten shallow ones</strong> — pick something specific and dig deep.</li>
-<li><strong>Visualize</strong> — word clouds, bar charts, distributions, sentiment over time. A good chart is worth a thousand words.</li>
+<li><strong>Visualize</strong> — bar charts, scatter plots, heatmaps, distributions, word clouds, maps. A good chart is worth a thousand words.</li>
 <li><strong>Google and AI are your friends</strong> — use ChatGPT/Claude to help with code or interpretation. Use Google to sanity-check your findings.</li>
 <li><strong>Have fun with it</strong> — the best projects come from genuine curiosity. Pick data you actually want to explore.</li>
 </ul>
