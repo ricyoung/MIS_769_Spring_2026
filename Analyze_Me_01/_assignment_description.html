@@ -1,0 +1,141 @@
+<h2>Objective</h2>
+<p>Your task is to <strong>find a text dataset, explore it, and explain what you found</strong> — using Python (Colab) and the NLP techniques we've been learning.</p>
+<p>This is what you do in any startup, business analysis, or research role: you find data, you clean it, you analyze it, and you explain what it means. <strong>Think of this like a startup pitch</strong> — you found interesting data, you dug into it, and now you're telling someone why it matters.</p>
+<p>This assignment is intentionally open-ended. You choose the data. You choose the questions. You decide what's worth investigating.</p>
+<p><strong>Questions? Email me: <a href="mailto:ryoung@unlv.edu">ryoung@unlv.edu</a></strong></p>
+
+<hr>
+
+<h2>What to Submit</h2>
+<ol>
+<li><strong>A PDF/Word report</strong> summarizing your key findings (2–4 pages, more is fine)</li>
+<li><strong>Your Colab notebook</strong> (.ipynb) with the analysis code</li>
+<li><strong>At least one visualization</strong> (word cloud, frequency chart, sentiment plot, etc.)</li>
+<li><strong>The data</strong> or a link to it</li>
+</ol>
+
+<hr>
+
+<h2>Sample Reports</h2>
+<p>Not sure what a good submission looks like? These are real reports from previous students. Notice how each one states a problem, describes the data and cleaning, shows visualizations, and wraps up with a conclusion:</p>
+<ul>
+<li><a href="https://github.com/ricyoung/MIS_769_Spring_2026/raw/main/Analyze_Me_01/Analyze_Me_1.pdf" target="_blank">Sample #1 — Airline Delays to Las Vegas</a></li>
+<li><a href="https://github.com/ricyoung/MIS_769_Spring_2026/raw/main/Analyze_Me_01/Analyze_Me_2.pdf" target="_blank">Sample #2 — Real Estate Business Insights</a></li>
+<li><a href="https://github.com/ricyoung/MIS_769_Spring_2026/raw/main/Analyze_Me_01/Analyze_Me_3.pdf" target="_blank">Sample #3 — Beach vs. Mountain Vacation Preferences</a></li>
+</ul>
+
+<hr>
+
+<h2>Choosing Your Dataset</h2>
+<p><strong>Use any text dataset that interests you.</strong> The best projects come from students who pick something they're genuinely curious about. Here are some ideas to get you started:</p>
+
+<h3>Customer Reviews &amp; Feedback</h3>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews" target="_blank">Amazon Fine Food Reviews</a> (Kaggle) — 500K+ reviews with ratings, helpfulness votes</li>
+<li><a href="https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset" target="_blank">Yelp Business Reviews</a> (Kaggle) — restaurant/business reviews with stars, location</li>
+<li>App Store or Google Play reviews for an app you use</li>
+</ul>
+
+<h3>News &amp; Media</h3>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/rmisra/news-category-dataset" target="_blank">HuffPost News Categories</a> (Kaggle) — 200K+ headlines with categories</li>
+<li><a href="https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset" target="_blank">Fake vs. Real News</a> (Kaggle) — can you tell them apart with NLP?</li>
+<li>Reddit posts from a subreddit (use the API or a Kaggle dump)</li>
+</ul>
+
+<h3>Social Media &amp; Conversations</h3>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/kazanova/sentiment140" target="_blank">Twitter Sentiment (Sentiment140)</a> (Kaggle) — 1.6M tweets with sentiment labels</li>
+<li><a href="https://www.kaggle.com/datasets/datasnaek/youtube" target="_blank">YouTube Comments</a> (Kaggle) — comments from trending videos</li>
+<li>Your own text messages, emails, or chat exports (anonymized)</li>
+</ul>
+
+<h3>Business &amp; Domain-Specific</h3>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews" target="_blank">IMDB Movie Reviews</a> (Kaggle) — 50K labeled movie reviews</li>
+<li>Job postings from Indeed/LinkedIn (scrape or find a dataset)</li>
+<li>SEC filings, earnings call transcripts, or financial news</li>
+<li>Medical/clinical text, legal documents, or song lyrics</li>
+</ul>
+
+<p><strong>More sources:</strong> <a href="https://huggingface.co/datasets" target="_blank">HuggingFace Datasets</a> | <a href="https://www.kaggle.com/datasets?tags=13204-NLP" target="_blank">Kaggle NLP Datasets</a> | <a href="https://github.com/awesomedata/awesome-public-datasets" target="_blank">Awesome Public Datasets</a></p>
+
+<hr>
+
+<h2>Your Report Should Tell a Story</h2>
+<p>The most common mistakes on this assignment are: (1) jumping straight into code without explaining <em>why</em> you're looking at this data, (2) not telling me what you did to clean it, and (3) not wrapping up with a conclusion. <strong>Your report needs a beginning, a middle, and an end.</strong></p>
+
+<p>Here's the flow:</p>
+<ol>
+<li><strong>The Problem:</strong> What question are you trying to answer? Why does this topic matter? <em>(Even one sentence is fine — just give me the "why.")</em></li>
+<li><strong>The Data:</strong> What dataset did you find? Where did it come from? How big is it?</li>
+<li><strong>The Cleaning:</strong> What did you have to fix, remove, or transform — <strong>and why?</strong> Don't just say "I removed stopwords." Tell me <em>why</em> you removed them and what difference it made.</li>
+<li><strong>The Analysis:</strong> What NLP techniques did you apply? What do your visualizations show?</li>
+<li><strong>The Conclusion:</strong> What did you find? Does it answer your original question? What surprised you? What would you do next?</li>
+</ol>
+
+<h3>Example</h3>
+<blockquote style="border-left: 4px solid #2196F3; padding: 10px 15px; background-color: #f9f9f9; margin: 15px 0;">
+<p><strong>Problem:</strong> "Are customers complaining about the same things, or is every complaint unique?"</p>
+<p><strong>Data:</strong> "I downloaded 50,000 Amazon product reviews from Kaggle."</p>
+<p><strong>Cleaning:</strong> "I removed 2,300 duplicate reviews and filtered out entries with no review text. I also removed stopwords because words like 'the' and 'and' were drowning out the actual complaint terms."</p>
+<p><strong>Analysis:</strong> "I ran sentiment analysis, built a word cloud of 1-star reviews, and used NER to extract product names."</p>
+<p><strong>Conclusion:</strong> "It turns out 60% of negative reviews mention 'shipping' or 'packaging' — the products themselves aren't the problem. A company looking at this data should fix their logistics, not their product line."</p>
+</blockquote>
+
+<hr>
+
+<h2>Grading Rubric (40 points)</h2>
+<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+<thead>
+<tr style="background-color: #f0f0f0;">
+<th style="text-align: left;">Category</th>
+<th style="text-align: center;">Points</th>
+<th style="text-align: left;">What I'm Looking For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Problem Statement &amp; Data Selection</strong></td>
+<td style="text-align: center;">5</td>
+<td>You stated a clear problem or question, found a real dataset, and explained where it came from</td>
+</tr>
+<tr>
+<td><strong>Data Cleaning &amp; Preprocessing</strong></td>
+<td style="text-align: center;">10</td>
+<td>You explained <em>what</em> you cleaned and <em>why</em> — not just that you did it, but the reasoning behind your choices</td>
+</tr>
+<tr>
+<td><strong>Analysis &amp; Visualizations</strong></td>
+<td style="text-align: center;">15</td>
+<td>You applied NLP techniques, created meaningful visualizations, and found something interesting</td>
+</tr>
+<tr>
+<td><strong>Conclusion &amp; Communication</strong></td>
+<td style="text-align: center;">10</td>
+<td>You wrapped up your findings, tied them back to your original question, and explained it clearly</td>
+</tr>
+</tbody>
+</table>
+<p><em>This is a flexible rubric. If you did the work and can explain what you found, you'll do well.</em></p>
+
+<hr>
+
+<h2>Tips</h2>
+<ul>
+<li><strong>Use what we've learned</strong> — spaCy, NLTK, HuggingFace, word clouds, sentiment analysis, NER. You've already done this in HW1–3.</li>
+<li><strong>Start simple</strong> — load the data, look at it, clean it. Don't jump to fancy models before understanding your data.</li>
+<li><strong>One good question beats ten shallow ones</strong> — pick something specific and dig deep.</li>
+<li><strong>Visualize</strong> — word clouds, bar charts, distributions, sentiment over time. A good chart is worth a thousand words.</li>
+<li><strong>Google and AI are your friends</strong> — use ChatGPT/Claude to help with code or interpretation. Use Google to sanity-check your findings.</li>
+<li><strong>Have fun with it</strong> — the best projects come from genuine curiosity. Pick data you actually want to explore.</li>
+</ul>
+
+<hr>
+
+<h2>Submission</h2>
+<ul>
+<li>Submit your <strong>PDF report</strong>, <strong>Colab notebook (.ipynb)</strong>, and <strong>data (or link)</strong> via Canvas</li>
+<li>Accepted formats: .pdf, .docx, .ipynb, .zip</li>
+</ul>
+<p><strong>Due: End of Week 6 (February 28, 2026)</strong></p>
